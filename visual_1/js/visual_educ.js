@@ -83,7 +83,8 @@ class visEduc {
         vis.displayData.forEach(element => {
             // update to reflect only developing countries
             element.world_ave = +element.world_ave * 0.7
-            element["no_school"] = 100 - element.world_ave
+            element["no_school"] = 80 - element.world_ave
+            element["sec_school"] = 20
 
         });
         vis.updateVis()
@@ -155,7 +156,34 @@ class visEduc {
                     .remove()
             )
 
-        // TO DO add lower secondary education 
+        // TO DO add lower secondary education
+
+        vis.secBars = vis.svg.selectAll(".secbars")
+            .data(vis.displayData)
+        vis.secBars
+            .join(
+                enter => enter
+                    .append("rect")
+                    .merge(vis.secBars)
+                    .attr("class", "bars")
+
+                    .attr("x", d => vis.xscale(d.year))
+                    .attr("y", d => vis.yscale(d.no_school + d.world_ave + d.secBars))
+                    .attr("width", vis.xscale.bandwidth())
+                    .attr("height", d => (vis.height - vis.yscale(d.no_school)))
+                    .attr("fill", "#04B46A")
+                    .attr("opacity", 0.8)
+                    .attr("stroke-width", 1)
+                    .selection()
+                ,
+                update => update
+                    .selection()
+                ,
+                exit => exit
+                    .remove()
+            )
+
+
         vis.svg.select(".y-axis").call(vis.yAxis);
         vis.svg.select(".x-axis").call(vis.xAxis);
 
