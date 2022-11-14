@@ -3,7 +3,7 @@
 * * * * * * * * * * * * * */
 
 // init global variables,  helper functions
-let myvisEduc;
+let myMapBrushVis;
 
 function updateAllVisualizations() {
     visEduc.wrangleData()
@@ -11,12 +11,19 @@ function updateAllVisualizations() {
 
 // load data using promises
 let promises = [
-    d3.csv("data/educ_att_prim_aggreg.csv"),
+    d3.csv("data/fixed-broadband-subscriptions.csv"), // broadbandData
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json") // geoData
 ];
 
 Promise.all(promises)
     .then(function (data) {
         console.log("check out the data", data)
+
+        data[0].forEach(function(d){
+            console.log(d["Country Name"]);
+        });
+
+
         initMainPage(data)
     })
     .catch(function (err) { console.log(err) });
@@ -27,9 +34,6 @@ function initMainPage(allDataArray) {
     // log data
     console.log(allDataArray);
 
-    // Matrix chart
-
-    myvisEduc = new visEduc('visual_educ', allDataArray)
-
+    myMapBrushVis = new MapBrushVis('mapBrushDiv', allDataArray[0], allDataArray[1])
 
 }
