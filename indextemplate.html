@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -49,11 +49,7 @@
                                         <div class="row" style="height: 70vh; background: lightgrey; padding: 1vh;">
                                             <div id="mapDiv"
                                                  style="height: 100%; width:100%; border: thin solid grey; border-radius: 5px; background: rgba(64,64,64,0.4);">
-                                                <!--                                                &lt;!&ndash; TODO - DELETE THE LINES BELOW &ndash;&gt;-->
-                                                <!--                                                <div class="row justify-content-center"-->
-                                                <!--                                                     style="height: 100%; width: 100%">-->
-                                                <!--&lt;!&ndash;                                                    <p class="align-self-center">TODO</p>&ndash;&gt;-->
-                                                <!--                                                </div>-->
+                                                <h1>MAJOR MAP VISUALIZATION HERE (main vis)</h1>
                                             </div>
                                         </div>
                                     </div>
@@ -92,18 +88,14 @@
                     </div>
 
                     <div class="row"  style="height: 40%; background: lightgrey; padding-left: 0vh; padding-bottom: 1vh; padding-right: 1vh; padding-top: 0vh">
-                        <div id="barDiv" class="align-self-center" style="height: 100%; width:100%; border: thin solid grey; border-radius: 5px; background: rgba(64,64,64,0.4)">
+                        <div id="timeline" class="align-self-center" style="height: 100%; width:100%; border: thin solid grey; border-radius: 5px; background: rgba(64,64,64,0.4)">
+                            <h1>CIRCLE TIMELINE</h1>
                         </div>
                     </div>
 
                     <div class="row" style="height: 40%; background: lightgrey; padding-left: 0vh; padding-bottom: 1vh; padding-right: 1vh; padding-top: 0vh">
-                        <div id="barTwoDiv" class="align-self-center" style="height: 100%; width:100%; border: thin solid grey; border-radius: 5px; background: rgba(64,64,64,0.4)">
-
-                            <!--                            &lt;!&ndash; TODO - (DELETE THE LINES BELOW ONCE YOU DISPLAY THE VISUALIZATION) &ndash;&gt;-->
-                            <!--                            <div class="row justify-content-center" style="height: 100%; width: 100%">-->
-                            <!--                                <p class="align-self-center">TODO</p>-->
-                            <!--                            </div>-->
-
+                       <div id="barTwoDiv" class="align-self-center" style="height: 100%; width:100%; border: thin solid grey; border-radius: 5px; background: rgba(64,64,64,0.4)">
+                           <h1>LEGENDS</h1>
                         </div>
                     </div>
                 </div>
@@ -111,7 +103,9 @@
 
 
             <div class="row" style="height: 18vh; background: #bdbdbd; padding: 0; border: 0">
-                <div id="brushDiv" style="height: 100%; width:100%;"></div>
+                <div id="brushDiv" style="height: 100%; width:100%;">
+                    <h1>BRUSH WILL BE HERE</h1>
+                </div>
             </div>
 
         </div>
@@ -139,11 +133,8 @@
 <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
 <!-- OWN JS -->
-<script src="js/helpers.js"></script>
-<script src="js/dataTable.js"></script>
-<script src="js/mapVis.js"></script>
-<script src="js/barVis.js"></script>
-<script src="js/brushVis.js"></script>
-<script src="visual_1/js/main.js"></script>
+<script src="js/circleTimeline.js"></script>
+<script src="js/circleTimelineMain.js"></script>
+
 </body>
 </html>
