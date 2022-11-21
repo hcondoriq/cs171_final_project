@@ -1,1 +1,27 @@
 /* custom css rules
+ */
+
+body {
+    font-family: "Franklin Gothic Book";
+}
+
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #555;
+    shape-rendering: crispEdges;
+}
+
+#timelineBrushDiv .x-axis, .y-axis text {
+    font-weight: 600;
+}
+
+.timeline-axis-title {
+    font-size: 12px;
+}
+
+#timeline-brush-title, #map-title {
+    font-weight: 600;
+    font-size: 18px;
+}
