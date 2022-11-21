@@ -59,8 +59,8 @@ class VisOne {
 
         // color scale (to implement later)
         vis.colorScale = d3.scaleLinear()
-        .range(["#FF0000", "#FFA500", "#90EE90", "#00FF00"])
-        .domain([0, 400])
+            .range(["#FF0000", "#01871e"])
+            .domain([0, 50])
         // .domain([0, d3.max(vis.data2, d => d.internetcost)])
 
         console.log("color scale", vis.colorScale)
@@ -132,21 +132,21 @@ class VisOne {
                 "12": d[2020],
                 "13": d[2021],
                 },
-                access: {
-                    "0": d[0],
-                    "1": d[1],
-                    "2": d[2],
-                    "3": d[3],
-                    "4": d[4],
-                    "5": d[5],
-                    "6": d[6],
-                    "7": d[7],
-                    "8": d[8],
-                    "9": d[9],
-                    "10": d[10],
-                    "11": d[11],
-                    "12": d[12],
-                    },
+            access: {
+                "0": d[0],
+                "1": d[1],
+                "2": d[2],
+                "3": d[3],
+                "4": d[4],
+                "5": d[5],
+                "6": d[6],
+                "7": d[7],
+                "8": d[8],
+                "9": d[9],
+                "10": d[10],
+                "11": d[11],
+                "12": d[12],
+                },
             // income_class: d.Income_2021,
             measure: d.Baskets_combined_simplified,
             // region: d.ITURegion,
@@ -213,7 +213,7 @@ class VisOne {
                 // region: d.ITURegion,
                 // unit: d.unit
             }
-            vis.displayData.push(pushData)
+            vis.displayData2.push(pushData)
         })
 
         console.log("second display data", vis.displayData2)
@@ -282,6 +282,130 @@ class VisOne {
             .attr("x2", 1220)
             .attr("y2", 650);
 
+        //Append a defs (for definition) element to your SVG
+        let defs = vis.svg.append("defs");
+
+        //Append a linearGradient element to the defs and give it a unique id
+        vis.linearGradient = defs.append("linearGradient")
+            .attr("id", "linear-gradient")
+
+        //Horizontal gradient
+        vis.linearGradient
+            .attr("x1", "0%")
+            .attr("y1", "0%")
+            .attr("x2", "100%")
+            .attr("y2", "0%");
+
+        //Set the color for the start (0%)
+        vis.linearGradient.append("stop")
+            .attr("offset", "0%")
+            .attr("stop-color", "#FF0000"); //light blue
+
+        //Set the color for the end (100%)
+        vis.linearGradient.append("stop")
+            .attr("offset", "100%")
+            .attr("stop-color", "#01871e"); //dark blue
+
+        //Draw the rectangle and fill with gradient
+        vis.svg.append("rect")
+            .attr("width", 300)
+            .attr("height", 20)
+            .style("fill", "url(#linear-gradient)")
+            .attr("transform", "translate(1300, 100)rotate(90)")
+
+        vis.legendlabel = vis.svg
+            .append("text")
+            .attr("class", "legend")
+            .attr("fill", "black")
+            .attr("x", 1320)
+            .attr("y", 110)
+            .attr("font-size", "smaller")
+            .text("Low Access")
+
+        vis.legendlabel2 = vis.svg
+            .append("text")
+            .attr("class", "legend")
+            .attr("fill", "black")
+            .attr("x", 1320)
+            .attr("y", 400)
+            .attr("font-size", "smaller")
+            .text("High Access")
+
+        let legendcircles = [5, 10, 20, 30]
+
+        vis.circleLegend = vis.svg
+            .append("circle")
+            .data(legendcircles)
+            .attr("r", (d, i) => {
+                for(let i = 0; i < legendcircles.length; i++){
+                // console.log("circles", d, i)
+                    return legendcircles[i]
+                }
+            })
+            .attr("cx", 1290)
+            .attr("cy", 430)
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3)
+
+        vis.circleLegend2 = vis.svg
+            .append("circle")
+            .data(legendcircles)
+            .attr("r", 10)
+            .attr("cx", 1290)
+            .attr("cy", 460)
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3)
+
+        vis.circleLegend3 = vis.svg
+            .append("circle")
+            .data(legendcircles)
+            .attr("r", 20)
+            .attr("cx", 1290)
+            .attr("cy", 500)
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3)
+
+        vis.circleLegend2 = vis.svg
+            .append("circle")
+            .data(legendcircles)
+            .attr("r", 30)
+            .attr("cx", 1290)
+            .attr("cy", 560)
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3)
+
+        vis.circleLegend2 = vis.svg
+            .append("circle")
+            .data(legendcircles)
+            .attr("r", 40)
+            .attr("cx", 1290)
+            .attr("cy", 640)
+            .attr("fill", "none")
+            .attr("stroke", "black")
+            .attr("stroke-width", 3)
+
+        vis.legendlabel3 = vis.svg
+            .append("text")
+            .attr("class", "legend")
+            .attr("fill", "black")
+            .attr("x", 1330)
+            .attr("y", 435)
+            .attr("font-size", "smaller")
+            .text("Low Cost")
+
+        vis.legendlabel4 = vis.svg
+            .append("text")
+            .attr("class", "legend")
+            .attr("fill", "black")
+            .attr("x", 1340)
+            .attr("y", 650)
+            .attr("font-size", "smaller")
+            .text("High Cost")
+
 
         vis.updateVis()
     }
@@ -322,36 +446,38 @@ class VisOne {
         // vis.rows.exit().remove()
 
         for(let i = 0; i < 14; i++) {
-            for (let j = 0; j <14; j++){
                 // console.log(vis.displayData2[i].years)
             vis.areaCell = vis.svg.selectAll()
                 .data(vis.sampleData)
                 .enter().append("circle")
                 .attr("r", (d) => {
-                    if (d.years[i] > 200) {
-                        return 22
+                    console.log("hmm", d.years, i)
+                    if (d.years[i] > 70) {
+                        return 30
                     }
                     else if(d.years[i] == 0) {
                         return 5
                     }
                     else {
-                        return (d.years[i]) * 0.3
+                        return (d.years[i]) * 0.5
                     }
                 })
                 .attr("cy", (d, i) => {
                     return 50 + i * 100
                 })
                 .attr("cx", 150 + 80*i)
-                .attr("fill", (d,i) => {
+                .attr("fill", (d) => {
                     // console.log("d,i?", d, i)
                     if (d.years[i] == 0) {
                         return "#FAF9F6"
                     }
                     else {
+                        console.log("hey again", d.access, i)
+                        let value = d.access[i]
                         // console.log("hey", i, j, vis.displayData2[i].years)
                         // console.log(vis.colorScale(vis.displayData2[i].years[j]))
                         // let value = vis.colorScale(vis.displayData2[i].years[j])
-                        return "#02C8D9"
+                        return vis.colorScale(value)
                     }
                 })
                 // change fill for those circles with no values
@@ -375,10 +501,10 @@ class VisOne {
                             .style("top", event.pageY + "px")
                             .html(`
         <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
-            <h3>State: ${row.name}<h3>
-            <h4>Region: ${row.region}</h4>
-            <h4>Internet Cost: ${row.unit}</h4>
+            <h3>Region: ${d.region}<h3>
+            <h4>Internet Cost: ${d.years[i]}</h4>
             <h4>Units: ${row.unit}</h4>
+            <h4>Measure: ${d.measure}</h4>
 
         </div>`);
                     }
@@ -388,18 +514,21 @@ class VisOne {
                 .on('mouseout', function(event, d) {
                     d3.select(this)
                         .attr('stroke-width', '1px')
-                        .attr("fill", d => {
+                        .attr("fill", (d) => {
 
-                            let circleName = d.name
-
-                            let color = ""
-                            vis.sampleData.forEach(d => {
-                                // console.log("D.STATE", vis.stateInfo)
-                                if (d.name === circleName) {
-                                    color = "#02C8D9"
-                                }
-                            })
-                            return color;
+                            console.log("access", d.access[i])
+                            return vis.colorScale(d.access[i])
+                            // let circleName = d.name
+                            //
+                            // let color = ""
+                            // vis.sampleData.forEach(d => {
+                            //     // console.log("D.STATE", vis.stateInfo)
+                            //     // if (d.name === circleName) {
+                            //         color = vis.colorScale(d.access[i])
+                            //             // "#02C8D9"
+                            //     // }
+                            // })
+                            // return color;
                         })
                     vis.tooltip
                         .style("opacity", 0)
@@ -407,7 +536,6 @@ class VisOne {
                         .style("top", 0)
                         .html(``);
                 })
-        }
         }
 
         // make it mobile friendly so when you drag, it moves over

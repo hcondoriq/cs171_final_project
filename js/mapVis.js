@@ -121,8 +121,8 @@ class MapVis {
             // check if they're the same country
             if (d["Country Name"] == geoCountryName) {
                 // iterate through the years (by default 1998-2021 since those are the years that have info)
-                console.log("UPDATED START", vis.startYear)
-                console.log("UPDATED END", vis.endYear)
+                // console.log("UPDATED START", vis.startYear)
+                // console.log("UPDATED END", vis.endYear)
                 d3.range(vis.startYear, vis.endYear).forEach(function (i) {
                     // add the broadband value to the array if it's > 0
                     if (+d[i] > 0) {
@@ -189,7 +189,7 @@ class MapVis {
 
             // if country not in the set, assign the color black
             } else {
-                console.log("not in set ", geoCountryName);
+                // console.log("not in set ", geoCountryName);
                 vis.countryInfo[d.properties.name] = {
                     name: d.properties.name,
                     color: '#000000',
@@ -243,10 +243,10 @@ class MapVis {
     onSelectionChange(selectionStart, selectionEnd) {
         let vis = this;
 
-        console.log("start range", selectionStart)
-        console.log("end range", selectionEnd)
-
-        console.log("start range YEAR", selectionStart.getFullYear())
+        // console.log("start range", selectionStart)
+        // console.log("end range", selectionEnd)
+        //
+        // console.log("start range YEAR", selectionStart.getFullYear())
 
         // set the start and years equal to the selected range
         vis.startYear = selectionStart.getFullYear();

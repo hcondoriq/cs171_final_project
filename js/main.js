@@ -2,17 +2,17 @@
 *           MAIN           *
 * * * * * * * * * * * * * */
 
-var main = d3.select("main");
-var scrolly = main.select("#scrolly");
-var figure = scrolly.select("figure");
-var article = scrolly.select("article");
-var step = article.selectAll(".step");
+let main = d3.select("main");
+let scrolly = main.select("#scrolly");
+let figure = scrolly.select("figure");
+let article = scrolly.select("article");
+let step = article.selectAll(".step");
 
 // ensure refresh goes to top of page
 window.onbeforeunload = () => window.scrollTo(0, 0);
 
 // initialize the scrollama
-var scroller = scrollama();
+let scroller = scrollama();
 // 
 // init global variables,  helper functions
 
@@ -158,6 +158,7 @@ Promise.all(promises)
 
 
         console.log("check out the data", data[1])
+        console.log("mayowa's data", data[5])
         data_glob = data
 
         initMainPage(data)
