@@ -15,20 +15,36 @@ window.onbeforeunload = () => window.scrollTo(0, 0);
 var scroller = scrollama();
 // 
 // init global variables,  helper functions
-let myvisEduc;
 
+let myMapVis;
+let myTimelineBrushVis;
+
+let myvisEduc;
 
 
 // load data using promises
 let promises = [
     d3.csv("data/educ_att_prim_aggreg.csv"),
     d3.csv("data/educ_att_sec_aggreg.csv"),
+    d3.csv("data/fixed-broadband-subscriptions.csv"), // broadbandData
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"), // geoData
+    d3.json("data/world-broadband.json"), // worldBroadbandData
 ];
 let data_glob
 Promise.all(promises)
     .then(function (data) {
+        console.log("check out the data", data);
+
+        // convert the years in worldBroadbandData to dates
+        let parseDate = d3.timeParse("%Y");
+        data[4].years.forEach(function(d){
+            d["Year"] = parseDate(d["Year"].toString());
+        });
+
+
         console.log("check out the data", data[1])
         data_glob = data
+
         initMainPage(data)
 
     })
@@ -42,7 +58,6 @@ function initMainPage(allDataArray) {
     // kick things off
 
 }
-
 
 
 
@@ -78,6 +93,31 @@ const stepEvents = {
                 .transition()
                 .duration(1000)
 
+
+    // create event handler
+    let eventHandler = {
+        bind: (eventName, handler) => {
+            document.body.addEventListener(eventName, handler);
+        },
+        trigger: (eventName, extraParameters) => {
+            document.body.dispatchEvent(new CustomEvent(eventName, {
+                detail: extraParameters
+            }));
+        }
+    }
+
+    // create instances
+    myMapVis = new MapVis('mapDiv', allDataArray[2], allDataArray[3])
+    myTimelineBrushVis = new TimelineBrushVis('timelineBrushDiv', allDataArray[4].years, eventHandler)
+
+    // bind event handler
+    eventHandler.bind("selectionChanged", function(event){
+        let rangeStart = event.detail[0];
+        // console.log("start range", rangeStart)
+        let rangeEnd = event.detail[1];
+        // console.log("end range", rangeEnd)
+        myMapVis.onSelectionChange(rangeStart, rangeEnd);
+    });
 
         }
     }
