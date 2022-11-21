@@ -3,45 +3,120 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Final project VI </title>
+    <title> Final project Va </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <main>
+        <div class="container-fluid" style="height: 100vh; padding-top: 1vh">
+            <!-- HEADING -->
+            <section class="row d-flex align-items-center" id="intro">
+                <h1 class="intro__hed " style="text-align: center">CS171 Final project</h1>
+                <p class="intro__dek">
+                    Educational attainment over time.
+                </p>
+            </section>
 
-    <div class="container-fluid" style="height: 100vh; padding-top: 1vh">
-        <!-- HEADING -->
-        <div class="row d-flex align-items-center" style="height: 10vh; padding: 0">
-            <h1 style="text-align: center">Final Project</h1>
+
+            <div class="row">
+                <section id="scrolly">
+                    <figure id="visual_educ">
+
+                    </figure>
+
+
+
+                    <article>
+                        <div class="step" data-step="1">
+                            <p class="step-head"></p>
+                            <p> Education attainment globally </p>
+                        </div>
+                        <div class="step" data-step="2">
+                            <p class="step-head">Global trends over time</p>
+                            <p> Based on the data on ..., the global trend shows an improvement
+                                on educational attainment </p>
+                        </div>
+                        <div class="step" data-step="3">
+                            <p class="step-head">Educational attainment, Developed countries
+                            </p>
+                            <p> The trend for developed countries shows a clear improvement </p>
+                        </div>
+                        <div class="step" data-step="4">
+                            <p class="step-head">Developing countries</p>
+                            <p> But for developing countries this still is a work in progress </p>
+                        </div>
+
+                        <div class="step" data-step="5">
+
+                        </div>
+                    </article>
+                </section>
+            </div>
+
+            <section class="row d-flex align-items-center" id="intro2">
+                <h1 class="intro__hed2 " style="text-align: center">Visualization II</h1>
+                <p class="intro__dek2">
+                    Educational attainment over the world.
+                </p>
+            </section>
+
+            <div class="row">
+                <section id="scrolly2">
+                    <figure id="map_vis">
+
+                    </figure>
+
+
+
+                    <article>
+                        <div class="step" data-step="1">
+                            <p class="step-head"></p>
+                            <p> Education attainment globally </p>
+                        </div>
+                        <div class="step" data-step="2">
+                            <p class="step-head">Global trends over time</p>
+                            <p> Based on the data on ..., the global trend shows an improvement
+                                on educational attainment </p>
+                        </div>
+                        <div class="step" data-step="3">
+                            <p class="step-head">Educational attainment, Developed countries
+                            </p>
+                            <p> The trend for developed countries shows a clear improvement </p>
+                        </div>
+                        <div class="step" data-step="4">
+                            <p class="step-head">Developing countries</p>
+                            <p> But for developing countries this still is a work in progress </p>
+                        </div>
+
+                    </article>
+                </section>
+            </div>
         </div>
 
-        <div class="row">
-            <div id="mapBrushDiv" style="height: 71vh; width: 100%;"></div>
-        </div>
-    </div>
 
 
+        <!-- Load JS libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
 
-    <!-- Load JS libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
-    <!-- d3 -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-
-    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-    <script src="https://d3js.org/topojson.v2.min.js"></script>
-    <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
 
 
-    <!-- OWN JS -->
-    <script src="js/main.js"></script>
-    <script src="js/visual_educ.js"></script>
-    <script src="js/mapBrushVis.js"></script>
+        <!-- OWN JS -->
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+        <script src="main.js"></script>
 
+        <script src="https://unpkg.com/scrollama"></script>
+        <script src="js/main.js"></script>
+        <script src="js/visual_educ.js"></script>
+
+
+    </main>
 </body>
 
 </html>
