@@ -5,13 +5,15 @@
 
 class visEduc {
 
-    constructor(parentElement, data) {
+    constructor(parentElement, data1, data2) {
         this.parentElement = parentElement;
-        this.data = data
+        this.data = data1
+        this.data_prim = data1
+        this.data_sec = data2
         this.displayData
         // define colors
         // this.colors = ['#fddbc7', '#f4a582', '#d6604d', '#b2182b']
-
+        console.log("init data", this.data)
         this.initVis()
     }
 
@@ -19,12 +21,12 @@ class visEduc {
         let vis = this;
 
 
-        vis.margin = { top: 20, right: 20, bottom: 20, left: 20 };
-        vis.width = 800 - vis.margin.left - vis.margin.right;
+        vis.margin = { top: 20, right: 20, bottom: 20, left: 60 };
+        vis.width = 500 - vis.margin.left - vis.margin.right;
         // vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
-        vis.height = 600 - vis.margin.top - vis.margin.bottom;
-        console.log("width", vis.width)
-        console.log("height", vis.height)
+        vis.height = 300 - vis.margin.top - vis.margin.bottom;
+        // console.log("width", vis.width)
+        // console.log("height", vis.height)
         // init drawing area
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
             .attr('width', vis.width + vis.margin.left + vis.margin.right)
@@ -77,15 +79,17 @@ class visEduc {
 
 
 
-        vis.displayData = vis.data[0]
+        vis.displayData = vis.data
         console.log("data to wrangle", vis.displayData)
 
-        vis.displayData.forEach(element => {
+        vis.displayData.forEach((element, index) => {
             // update to reflect only developing countries
-            element.world_ave = +element.world_ave * 0.7
-            element["no_school"] = 80 - element.world_ave
-            element["sec_school"] = 20
-
+            element.world_ave = +element.world_ave
+            element["no_school"] = 100 - element.world_ave
+            // element["sec_school"] = 20
+            element["sec_school"] = +vis.data_sec[index].world_ave
+            element["prim_school"] = 100 - element["sec_school"] - element["no_school"]
+            element["total"] = element["no_school"] + element["sec_school"] + element["prim_school"]
         });
         vis.updateVis()
     }
@@ -114,9 +118,9 @@ class visEduc {
                     .attr("class", "bars")
 
                     .attr("x", d => vis.xscale(d.year))
-                    .attr("y", d => vis.yscale(d.world_ave))
+                    .attr("y", d => vis.yscale(d.prim_school + d.no_school))
                     .attr("width", vis.xscale.bandwidth())
-                    .attr("height", d => (vis.height - vis.yscale(+d.world_ave)))
+                    .attr("height", d => (vis.height - vis.yscale(+d.prim_school)))
                     .attr("fill", "#437983")
                     .attr("opacity", 0.7)
                     .selection()
@@ -141,7 +145,7 @@ class visEduc {
                     .attr("class", "bars")
 
                     .attr("x", d => vis.xscale(d.year))
-                    .attr("y", d => vis.yscale(d.no_school + d.world_ave))
+                    .attr("y", d => vis.yscale(d.no_school))
                     .attr("width", vis.xscale.bandwidth())
                     .attr("height", d => (vis.height - vis.yscale(d.no_school)))
                     .attr("fill", "#D4B46A")
@@ -168,9 +172,9 @@ class visEduc {
                     .attr("class", "bars")
 
                     .attr("x", d => vis.xscale(d.year))
-                    .attr("y", d => vis.yscale(d.no_school + d.world_ave + d.secBars))
+                    .attr("y", d => vis.yscale(d.no_school + d.prim_school + d.sec_school))
                     .attr("width", vis.xscale.bandwidth())
-                    .attr("height", d => (vis.height - vis.yscale(d.no_school)))
+                    .attr("height", d => (vis.height - vis.yscale(d.sec_school)))
                     .attr("fill", "#04B46A")
                     .attr("opacity", 0.8)
                     .attr("stroke-width", 1)
@@ -190,8 +194,3 @@ class visEduc {
     }
 
 }
-
-
-
-
-

@@ -2,40 +2,97 @@
 *           MAIN           *
 * * * * * * * * * * * * * */
 
+var main = d3.select("main");
+var scrolly = main.select("#scrolly");
+var figure = scrolly.select("figure");
+var article = scrolly.select("article");
+var step = article.selectAll(".step");
+
+// ensure refresh goes to top of page
+window.onbeforeunload = () => window.scrollTo(0, 0);
+
+// initialize the scrollama
+var scroller = scrollama();
+// 
 // init global variables,  helper functions
+
 let myMapVis;
 let myTimelineBrushVis;
 
-function updateAllVisualizations() {
-    visEduc.wrangleData()
-}
+let myvisEduc;
+
 
 // load data using promises
 let promises = [
+    d3.csv("data/educ_att_prim_aggreg.csv"),
+    d3.csv("data/educ_att_sec_aggreg.csv"),
     d3.csv("data/fixed-broadband-subscriptions.csv"), // broadbandData
     d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"), // geoData
     d3.json("data/world-broadband.json"), // worldBroadbandData
 ];
-
+let data_glob
 Promise.all(promises)
     .then(function (data) {
         console.log("check out the data", data);
 
         // convert the years in worldBroadbandData to dates
         let parseDate = d3.timeParse("%Y");
-        data[2].years.forEach(function(d){
+        data[4].years.forEach(function(d){
             d["Year"] = parseDate(d["Year"].toString());
         });
 
+
+        console.log("check out the data", data[1])
+        data_glob = data
+
         initMainPage(data)
+
     })
     .catch(function (err) { console.log(err) });
 
 // initMainPage
 function initMainPage(allDataArray) {
 
-    // log data
-    console.log(allDataArray);
+    myvisEduc = new visEduc('visual_educ', allDataArray[0], allDataArray[1])
+    init();
+    // kick things off
+
+}
+
+
+
+// define event dict for each step in scrolly
+const stepEvents = {
+    down: {
+        0: () => {
+
+        },
+        1: () => {
+            // myvisEduc = new visEduc('visual_educ', data_glob[0], data_glob[1])
+
+        },
+        2: () => {
+            // myvisEduc = new visEduc('visual_educ', data_glob[0], data_glob[1])
+            d3.select("#visual_educ")
+                .style("visibility", "visible")
+
+        },
+        3: () => {
+            // myvisEduc = new visEduc('visual_educ', data_glob[0], data_glob[1])
+            d3.select("#visual_educ")
+                .style("visibility", "visible")
+                .transition()
+                .duration(300)
+
+
+        },
+        4: () => {
+            // myvisEduc = new visEduc('visual_educ', data_glob[0], data_glob[1])
+            d3.select("#visual_educ")
+                .style("visibility", "hidden")
+                .transition()
+                .duration(1000)
+
 
     // create event handler
     let eventHandler = {
@@ -50,8 +107,8 @@ function initMainPage(allDataArray) {
     }
 
     // create instances
-    myMapVis = new MapVis('mapDiv', allDataArray[0], allDataArray[1])
-    myTimelineBrushVis = new TimelineBrushVis('timelineBrushDiv', allDataArray[2].years, eventHandler)
+    myMapVis = new MapVis('mapDiv', allDataArray[2], allDataArray[3])
+    myTimelineBrushVis = new TimelineBrushVis('timelineBrushDiv', allDataArray[4].years, eventHandler)
 
     // bind event handler
     eventHandler.bind("selectionChanged", function(event){
@@ -62,19 +119,84 @@ function initMainPage(allDataArray) {
         myMapVis.onSelectionChange(rangeStart, rangeEnd);
     });
 
-    // function brushed() {
-    //
-    //     // TO-DO: React to 'brushed' event
-    //     // Get the extent of the current brush
-    //     let selectionRange = d3.brushSelection(d3.select(".brush").node());
-    //     console.log("selection range", selectionRange)
-    //
-    //     // Convert the extent into the corresponding domain values
-    //     // let selectionDomain = selectionRange.map(timeline.x.invert);
-    //     // myMapVis.x.domain(selectionDomain);
-    //     //
-    //     // myMapVis.wrangleData();
-    //
-    // }
-
+        }
+    }
 }
+
+
+// generic window resize listener event
+function handleResize() {
+    // 1. update height of step elements
+    var stepH = Math.floor(window.innerHeight * 0.75);
+    step.style("height", stepH + "px");
+
+    var figureHeight = window.innerHeight / 2;
+    var figureMarginTop = (window.innerHeight - figureHeight) / 2;
+
+    figure
+        .style("height", figureHeight + "px")
+        .style("top", figureMarginTop + "px");
+
+    // 3. tell scrollama to update new element dimensions
+    scroller.resize();
+}
+
+// scrollama event handlers
+function handleStepEnter(response) {
+    console.log(response);
+    // response = { element, direction, index }
+
+    // add color to current step only
+    step.classed("is-active", function (d, i) {
+        return i === response.index;
+    });
+    stepEvents["down"][response.index]();
+    // update graphic based on step
+    // figure.select("div").text("data" + response.index + 1);
+}
+
+function init() {
+
+    // 1. force a resize on load to ensure proper dimensions are sent to scrollama
+    handleResize();
+
+    // 2. setup the scroller passing options
+    // 		this will also initialize trigger observations
+    // 3. bind scrollama event handlers (this can be chained like below)
+    scroller
+        .setup({
+            step: "#scrolly article .step",
+            offset: 0.5,
+            debug: false
+        })
+        .onStepEnter(handleStepEnter);
+}
+
+
+const width = 900
+const height = 600
+const svg = d3.select("map_vis").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+const projection = d3.geoMercator()
+    .scale(140)
+    .translate([width / 2, height / 1.4]);
+const path = d3.geoPath(projection)
+
+const g = svg.append("g")
+d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+    .then(data => {
+        const countries = topojson.feature(data, data.objects.countries)
+        g.selectAll("path").data(countries.features)
+            .enter()
+            .append("path")
+            .attr("class", "country")
+            .attr('d', path);
+
+    }
+
+    )
+
+
+
+
