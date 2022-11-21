@@ -4,10 +4,26 @@
 
 // init global variables, switches, helper functions
 let myVisOne;
+// let myMapBrushVis;
+let main = d3.select("main");
+let scrolly = main.select("#scrolly");
+let figure = scrolly.select("figure");
+let article = scrolly.select("article");
+let step = article.selectAll(".step");
+let data_glob
+
+// ensure refresh goes to top of page
+window.onbeforeunload = () => window.scrollTo(0, 0);
+
+// initialize the scrollama
+// var scroller = scrollama();
+//
+// init global variables,  helper functions
+let myvisEduc;
 
 function updateAllVisualizations(){
-    // VisOne.wrangleData()
-    // myMapVis.wrangleData()
+    visEduc.wrangleData()
+
 }
 
 // data = d3.csv("data/ICT_PriceBaskets.csv", row => {
@@ -260,6 +276,25 @@ let promises = [
         row[2019] = +row[2019]
         row[2020] = +row[2020]
         row[2021] = +row[2021]
+
+        row[0] = +row[0]
+        row[1] = +row[1]
+        row[2] = +row[2]
+        row[3] = +row[3]
+        row[4] = +row[4]
+        row[5] = +row[5]
+        row[6] = +row[6]
+        row[7] = +row[7]
+        row[8] = +row[8]
+        row[9] = +row[9]
+        row[10] = +row[10]
+        row[11] = +row[11]
+        row[12] = +row[12]
+
+
+
+
+
         return row
     }),
     d3.csv("data/InternetUse_Region.csv", row => {
@@ -296,14 +331,13 @@ let promises = [
         row[2020] = +row[2020]
         row[2021] = +row[2021]
         return row
-    })
+    }),
+    d3.csv("data/fixed-broadband-subscriptions.csv"), // broadbandData
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"), // geoData
+    d3.csv("data/educ_att_prim_aggreg.csv"),
+    d3.csv("data/educ_att_sec_aggreg.csv"),
 ];
-// //
-// // d3.csv("data/Data_Extract_From_World_Development_Indicators.csv", row).then( function(data) {
-// //
-// })
-//
-//
+
 Promise.all(promises)
     .then( function(data){ initMainPage(data) })
     .catch( function (err){console.log(err)} );
@@ -317,5 +351,9 @@ function initMainPage(dataArray) {
     //call VisOne
     // console.log("data set", dataArray[0], dataArray[1], dataArray[2])
     myVisOne = new VisOne('timeline', dataArray[0], dataArray[1])
+    // myMapBrushVis = new MapBrushVis('mapBrushDiv', dataArray[2], dataArray[3])
+    myvisEduc = new visEduc('visual_educ', dataArray[4], dataArray[5])
+
+
 
 }

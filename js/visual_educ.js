@@ -22,9 +22,9 @@ class visEduc {
 
 
         vis.margin = { top: 20, right: 20, bottom: 20, left: 60 };
-        vis.width = 500 - vis.margin.left - vis.margin.right;
+        vis.width = 1300 - vis.margin.left - vis.margin.right;
         // vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
-        vis.height = 300 - vis.margin.top - vis.margin.bottom;
+        vis.height = 500 - vis.margin.top - vis.margin.bottom;
         // console.log("width", vis.width)
         // console.log("height", vis.height)
         // init drawing area
@@ -39,7 +39,7 @@ class visEduc {
             .attr('class', 'title bar-title')
             .attr("id", vis.bar_id)
             .append('text')
-            .text("Educational attainment")
+            .text("How has educational attainment changed over time?")
             .attr('transform', `translate(${vis.width / 2}, -5)`)
             .attr('text-anchor', 'middle');
 

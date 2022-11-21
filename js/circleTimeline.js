@@ -116,7 +116,8 @@ class VisOne {
         vis.firstArray.forEach(function (d) {
             let pushData = {
             region: d.group,
-            years: {"0": d[2008],
+            years: {
+                "0": d[2008],
                 "1": d[2009],
                 "2": d[2010],
                 "3": d[2011],
@@ -131,6 +132,21 @@ class VisOne {
                 "12": d[2020],
                 "13": d[2021],
                 },
+                access: {
+                    "0": d[0],
+                    "1": d[1],
+                    "2": d[2],
+                    "3": d[3],
+                    "4": d[4],
+                    "5": d[5],
+                    "6": d[6],
+                    "7": d[7],
+                    "8": d[8],
+                    "9": d[9],
+                    "10": d[10],
+                    "11": d[11],
+                    "12": d[12],
+                    },
             // income_class: d.Income_2021,
             measure: d.Baskets_combined_simplified,
             // region: d.ITURegion,
@@ -143,8 +159,8 @@ class VisOne {
         vis.displayData2 = []
         vis.secondArray.forEach(function (d) {
             let pushData = {
-                region: d.Region,
-                years: {
+                // region: d.Region,
+                access_years: {
                     "0": d[2008],
                     "1": d[2009],
                     "2": d[2010],
@@ -197,7 +213,7 @@ class VisOne {
                 // region: d.ITURegion,
                 // unit: d.unit
             }
-            vis.displayData2.push(pushData)
+            vis.displayData.push(pushData)
         })
 
         console.log("second display data", vis.displayData2)
