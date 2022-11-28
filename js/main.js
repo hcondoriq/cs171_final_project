@@ -144,6 +144,9 @@ let promises = [
         row[2021] = +row[2021]
         return row
     }),
+    d3.csv("data/YoungPeople_HIV_171.csv", row => {
+        return row
+    })
 ];
 let data_glob
 Promise.all(promises)
