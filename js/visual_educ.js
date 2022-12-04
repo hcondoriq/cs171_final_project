@@ -21,6 +21,7 @@ class visEduc {
         let vis = this;
 
 
+
         vis.margin = { top: 20, right: 20, bottom: 20, left: 50 };
         // vis.width = 1300 - vis.margin.left - vis.margin.right;
         // vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
@@ -29,6 +30,7 @@ class visEduc {
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
         console.log("width", vis.width)
         console.log("height", vis.height)
+
         // init drawing area
         vis.svgFig = d3.select("#" + vis.parentElement).append("svg")
             .attr('width', vis.width + vis.margin.left + vis.margin.right)
