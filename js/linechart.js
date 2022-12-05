@@ -18,7 +18,7 @@ class LineVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 40, bottom: 20, left: 10};
+        vis.margin = {top: 20, right: 40, bottom: 20, left: 30};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -41,7 +41,7 @@ class LineVis {
 
         // append legend
         vis.svg.append('line')
-            .style("stroke", "red")
+            .style("stroke", "#c568a0")
             .style("stroke-width", 4.25)
             .attr("x1", 800)
             .attr("y1", 70)
@@ -52,16 +52,16 @@ class LineVis {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 600)
+            .attr("x", 590)
             .attr("y", 55)
             .attr("font-size", "smaller")
-            .text("Patent Applications (in 10,000s)")
+            .text("Patent Applications (in 100,000s)")
 
         vis.legendlabel2 = vis.svg
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 500)
+            .attr("x", 490)
             .attr("y", 75)
             .attr("font-size", "smaller")
             .text("Fixed broadband subscriptions (per 100 people)")
@@ -138,12 +138,6 @@ class LineVis {
 
         console.log("line chart display data", vis.literacy)
 
-
-        // for(let i = 0; i < 94; i++) {
-        //     if (vis.displayData[i].region == "World") {
-        //         vis.useData = vis.displayData[i]
-        //     }
-        // }
         vis.updateVis()
     }
 
@@ -157,28 +151,18 @@ class LineVis {
             .datum(vis.patents)
             .attr("fill", "none")
             .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
+            .attr("stroke-width", 2.5)
             .attr("d", d3.line()
                 .x(function(d) { return vis.x(d["Year"]) })
                 .y(function(d) { return vis.y(d["Resident Patents"]) })
             )
 
-        // vis.svg.append("path")
-        //     .datum(vis.literacy)
-        //     .attr("fill", "none")
-        //     .attr("stroke", "steelblue")
-        //     .attr("stroke-width", 1.5)
-        //     .attr("d", d3.line()
-        //         .x(function(d) { return vis.x(d["Year"]) })
-        //         .y(function(d) { return vis.y(d["Female Literacy"]) })
-        //     )
-
         console.log("is broadband here?", vis.broadband)
         vis.svg.append("path")
             .datum(vis.broadband)
             .attr("fill", "none")
-            .attr("stroke", "red")
-            .attr("stroke-width", 1.5)
+            .attr("stroke", "#c568a0")
+            .attr("stroke-width", 2.5)
             .attr("d", d3.line()
                 .x(function(d) { return vis.x(d["Year"]) })
                 .y(function(d) { return vis.y(d["Fixed Broadband Subscriptions"]) })
