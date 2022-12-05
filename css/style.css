@@ -37,6 +37,12 @@ body {
     font-size: 18px;
 }
 
+.map-text {
+    margin:0;
+    font-style: italic;
+    font-size: 14px;
+}
+
 /*.row {*/
 /*    justify-content: center;*/
 /*}*/

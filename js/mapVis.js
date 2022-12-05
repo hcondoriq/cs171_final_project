@@ -276,8 +276,8 @@ class MapVis {
                     .html(`
                 <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                      <h4>${vis.countryInfo[d.properties.name].name}<h4>   
-                     <h5> Avg. Fixed Broadbrand Subscriptions (per 100 people): ${vis.countryInfo[d.properties.name].avg}</h5>
-                     <h5>(${vis.startYear}-${vis.endYear})</h5>
+                     <h5>Avg. Fixed Broadbrand Subscriptions (per 100 people): ${vis.countryInfo[d.properties.name].avg}</h5>
+                     <h5>Selected Time Period: ${vis.startYear}-${vis.endYear}</h5>
                 </div>`);
             })
             .on('mouseout', function(event, d){
