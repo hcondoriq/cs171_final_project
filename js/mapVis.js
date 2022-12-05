@@ -111,7 +111,7 @@ class MapVis {
         // add legend
         vis.legend = vis.svg.append("g")
             .attr('class', 'legend')
-            .attr('transform', `translate(490, 380)`)
+            .attr('transform', `translate(480, 380)`)
 
         vis.legendScale = d3.scaleBand()
             .rangeRound([0, 200])
@@ -136,14 +136,14 @@ class MapVis {
 
         vis.svg.append("g")
             .attr("class", "x-axis axis")
-            .attr('transform', `translate(490, 390)`)
+            .attr('transform', `translate(480, 390)`)
 
         // append legend title
         vis.legendTitle = vis.svg.append("g")
             .attr("id", "legend-title")
             .append("text")
             .text("Fixed Broadband Subscriptions (per 100 people)")
-            .attr('transform', `translate(490, 375)`)
+            .attr('transform', `translate(480, 375)`)
             .attr("text-anchor", 'left')
             .attr("font-size", 9)
             .attr("font-weight", 9)
