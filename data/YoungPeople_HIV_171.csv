@@ -1,95 +1,131 @@
-Series Name,Series Code,Country Name,Country Code,1990 [YR1990],1997 [YR1997],1998 [YR1998],1999 [YR1999],2000 [YR2000],2001 [YR2001],2002 [YR2002],2003 [YR2003],2004 [YR2004],2005 [YR2005],2012 [YR2012],2013 [YR2013],2014 [YR2014],2015 [YR2015],2016 [YR2016],2017 [YR2017],2018 [YR2018],2019 [YR2019],2020 [YR2020],2021 [YR2021]
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Least developed countries: UN classification,LDC,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Afghanistan,AFG,100,100,100,100,100,100,200,200,200,200,500,500,500,500,500,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Angola,AGO,1300,4600,5000,5700,6000,6800,7100,7500,7800,8300,8200,7800,7000,6400,6200,6100,5900,5700,5600,5300
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Argentina,ARG,1700,2000,2000,1900,1800,1900,1900,1900,1900,1900,1900,1900,1900,1900,1900,1900,1900,1800,1800,1700
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Bangladesh,BGD,100,100,100,100,100,100,100,100,200,200,200,200,200,200,200,200,200,200,200,200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Brazil,BRA,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Burkina Faso,BFA,8200,3400,3200,3000,2700,2600,2400,2200,2100,2100,1200,1100,1100,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Cambodia,KHM,100,4800,4400,3900,3200,2400,2200,2000,1800,1500,1000,1000,1000,1000,1000,1000,1000,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Cameroon,CMR,5300,21000,22000,21000,21000,19000,18000,16000,15000,14000,10000,8900,8500,8100,7600,6600,5600,5100,4400,4000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Chad,TCD,3200,4100,3800,3500,3400,3100,3100,2900,2800,2700,2000,2000,2000,1900,1800,1800,1700,1500,1300,1100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Chile,CHL,500,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Central African Republic,CAF,6200,6700,6000,5600,5200,4600,4400,4000,3900,4000,2600,2400,2200,2000,1800,1700,1500,1400,1200,1200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Congo, Rep.",COG,3200,2300,2300,2300,2200,2100,2100,2000,2000,2100,2500,2600,2700,2700,3100,3500,3700,4000,4500,4100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Congo, Dem. Rep.",COD,19000,16000,15000,15000,14000,14000,13000,13000,12000,12000,8900,8600,8000,8000,7700,7400,6800,6200,5400,4800
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Costa Rica,CRI,100,200,200,200,200,200,200,200,500,500,500,500,500,500,500,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Cote d'Ivoire,CIV,15000,16000,15000,13000,12000,11000,10000,9400,8700,7900,4500,4100,3800,3400,3200,2500,2000,1600,1400,1300
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Colombia,COL,1800,3800,3800,3800,3600,3200,3300,3100,3100,3100,3400,3300,3200,3200,3200,3000,3000,3100,2900,2800
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Ecuador,ECU,500,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Dominican Republic,DOM,1100,1500,1400,1300,1300,1200,1100,1100,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Djibouti,DJI,100,1000,1000,1000,1000,500,500,500,200,200,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Cuba,CUB,500,500,500,500,500,500,500,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Egypt, Arab Rep.",EGY,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,El Salvador,SLV,200,500,500,500,500,500,500,500,500,500,500,500,500,200,200,200,200,200,200,200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Eritrea,ERI,1000,1000,1000,1000,1000,500,500,500,500,500,200,200,200,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Estonia,EST,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Equatorial Guinea,GNQ,200,500,500,500,500,1000,1000,1000,1000,1000,1000,1100,1000,1100,1100,1100,1100,1100,1200,1200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Ethiopia,ETH,33000,23000,20000,18000,16000,14000,13000,12000,11000,10000,6100,5800,5300,4700,4800,4300,4100,3900,3600,3500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Fiji,FJI,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Gabon,GAB,1000,1700,1700,1500,1400,1300,1200,1100,1000,1000,1000,1000,1000,500,1000,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Ghana,GHA,9500,9600,9100,8700,8000,7700,7300,7100,6800,6600,5900,5800,5800,5900,6000,6300,6400,6300,5600,4800
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Guatemala,GTM,1000,1600,1600,1600,1500,1400,1200,1100,1000,1000,100,100,100,100,200,200,200,200,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Guinea-Bissau,GNB,200,1000,1000,1100,1100,1100,1100,1000,1100,1100,1000,1000,1000,1000,1000,1000,1000,1000,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Guinea,GIN,1900,3700,3700,3900,3800,3800,3800,3700,3600,3600,3100,3000,3100,3000,3000,3000,2900,2800,2500,2500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Guam,GUM,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Guyana,GUY,100,200,200,200,200,200,100,100,100,100,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Haiti,HTI,6300,4300,4200,3900,3900,4000,3800,3700,3500,3400,2700,2600,2500,2400,2200,2000,1900,1800,1600,1300
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Honduras,HND,500,1000,1000,1000,1000,500,500,500,500,200,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,India,IND,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Iran, Islamic Rep.",IRN,100,500,1000,1000,1500,1900,2300,2700,2900,2900,1000,1000,1000,500,500,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Jamaica,JAM,2500,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,500,500,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Indonesia,IDN,100,2800,3800,5100,7400,12000,20000,23000,24000,26000,25000,24000,22000,20000,18000,17000,16000,15000,13000,13000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Iraq,IRQ,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Jordan,JOR,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Kazakhstan,KAZ,100,100,100,100,200,200,200,500,500,500,500,500,500,500,500,200,200,200,200,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Kenya,KEN,67000,53000,47000,43000,39000,36000,35000,32000,31000,30000,22000,20000,19000,17000,15000,14000,12000,12000,12000,12000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Korea, Dem. People's Rep.",PRK,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Kuwait,KWT,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Kosovo,XKX,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Lesotho,LSO,1900,10000,9800,9100,8700,8200,8100,7900,7900,7900,6500,6400,6100,5700,4900,4200,3500,3100,2800,2600
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Libya,LBY,100,100,100,100,100,100,100,200,200,200,200,200,200,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Liberia,LBR,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Lebanon,LBN,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Madagascar,MDG,100,100,100,100,100,100,200,200,200,200,1000,1000,1000,1000,1100,1300,1200,1400,1500,1700
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Malaysia,MYS,1200,1200,1200,1200,1300,1300,1300,1200,1200,1200,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Mali,MLI,2000,2200,2100,1900,1800,1700,1600,1500,1400,1400,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Malawi,MWI,28000,31000,28000,26000,25000,23000,22000,21000,20000,19000,16000,15000,13000,12000,11000,9700,8300,7300,7000,6300
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Mexico,MEX,3900,5600,5800,5900,5900,5900,6000,6000,6000,6100,6700,6700,6800,6800,6700,6600,6500,6300,6200,5900
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Morocco,MAR,200,500,500,500,500,500,500,500,500,500,500,200,200,200,200,200,200,200,200,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Mozambique,MOZ,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Myanmar,MMR,3500,10000,11000,13000,15000,15000,15000,14000,14000,13000,9100,8900,8700,8300,7800,7300,6800,6300,5900,5700
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Namibia,NAM,1600,6400,6000,5600,5100,4800,4500,4300,4100,3900,3000,2900,3000,3300,3400,3500,3200,2900,2500,2400
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Nepal,NPL,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Niger,NER,500,1000,1000,1000,1000,1000,1000,1000,500,500,200,200,200,200,200,200,200,200,200,200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Nigeria,NGA,46000,56000,52000,51000,48000,45000,43000,41000,40000,39000,32000,30000,30000,30000,30000,29000,29000,29000,26000,18000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Nicaragua,NIC,100,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Pakistan,PAK,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Panama,PAN,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Paraguay,PRY,200,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Philippines,PHL,100,100,100,100,200,200,500,500,500,1000,3000,3600,4300,4900,5300,6000,6800,7500,8300,10000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Peru,PER,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,500,500,500,500,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Papua New Guinea,PNG,100,500,1000,1000,1000,1000,1100,1100,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Puerto Rico,PRI,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Rwanda,RWA,6900,6300,6300,6300,6300,6100,5800,5600,5300,4900,2200,1900,1700,1500,1500,1200,1100,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Sierra Leone,SLE,1600,2300,2300,2300,2300,2300,2300,2300,2200,2300,2000,2100,2000,1900,1800,1600,1500,1400,1200,1100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Senegal,SEN,500,1000,1000,1100,1100,1100,1000,1000,1000,1000,200,200,200,200,200,200,500,500,500,500
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,South Africa,ZAF,25000,200000,210000,220000,230000,220000,220000,210000,200000,200000,150000,140000,130000,120000,110000,100000,89000,79000,71000,67000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Somalia,SOM,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,South Sudan,SSD,1600,2700,2900,2800,3000,3000,3000,3000,3100,3200,4100,4200,4200,4100,4300,4200,4500,4600,4700,4700
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Sri Lanka,LKA,100,100,100,100,200,200,200,200,200,100,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Tanzania,TZA,45000,42000,41000,38000,36000,36000,34000,33000,32000,32000,31000,30000,29000,28000,27000,25000,24000,22000,18000,15000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Thailand,THA,73000,26000,23000,20000,18000,17000,15000,13000,12000,11000,6700,6300,5900,5600,5000,4600,4200,3900,3600,3200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Syrian Arab Republic,SYR,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Tunisia,TUN,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Uganda,UGA,30000,26000,26000,26000,26000,26000,26000,26000,26000,25000,28000,26000,25000,24000,24000,23000,21000,20000,19000,20000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,United States,USA,..,..,..,..,..,..,..,..,..,..,8700,8000,7600,7300,6800,6500,6400,6100,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Yemen, Rep.",YEM,100,100,100,100,100,100,100,100,100,100,200,200,200,200,200,200,200,200,200,200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Zimbabwe,ZWE,79000,55000,51000,47000,44000,42000,39000,37000,36000,34000,22000,20000,19000,17000,15000,13000,10000,8600,7700,6800
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Zambia,ZMB,33000,33000,32000,32000,31000,30000,30000,29000,29000,28000,25000,25000,25000,24000,23000,23000,23000,19000,17000,15000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Vietnam,VNM,500,4100,4200,4300,4400,4500,4600,4600,4500,4300,2700,2400,2200,2000,1700,1400,1200,1100,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Uruguay,URY,100,200,100,100,100,100,100,100,100,100,200,200,200,200,200,200,200,100,200,200
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,"Venezuela, RB",VEN,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..,..
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,World,WLD,690000,1000000,970000,940000,910000,870000,850000,820000,790000,770000,650000,620000,590000,570000,540000,510000,480000,450000,430000,400000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,France,FRA,1100,1100,1000,1000,1100,1100,1100,1200,1200,1200,1100,1100,1000,1000,1000,1000,1000,1000,1000,1000
-Young people (ages 15-24) newly infected with HIV,SH.HIV.INCD.YG,Germany,DEU,..,..,..,..,..,..,..,..,..,..,1000,1000,1000,1000,1000,1000,1000,1000,1000,..
+Series Name,Series Code,Time,Time Code,World [WLD]
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,1997,YR1997,73.5636596679688
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,1998,YR1998,74.7139587402344
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,1999,YR1999,75.1602783203125
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2000,YR2000,75.3438720703125
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2001,YR2001,75.7927703857422
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2002,YR2002,76.2231216430664
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2003,YR2003,76.8137817382813
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2004,YR2004,77.2944793701172
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2005,YR2005,77.1474075317383
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2006,YR2006,77.8172836303711
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2007,YR2007,78.1115493774414
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2008,YR2008,78.6642074584961
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2009,YR2009,79.0705490112305
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2010,YR2010,79.804328918457
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2011,YR2011,80.246467590332
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2012,YR2012,80.6990737915039
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2013,YR2013,80.9379119873047
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2014,YR2014,81.526008605957
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2015,YR2015,81.7689971923828
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2016,YR2016,82.3073120117188
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2017,YR2017,82.6396179199219
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2018,YR2018,82.7228927612305
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2019,YR2019,83.0239105224609
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2020,YR2020,83.2975997924805
+"Literacy rate, adult female (% of females ages 15 and above)",SE.ADT.LITR.FE.ZS,2021,YR2021,..
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,1997,YR1997,84.5233383178711
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,1998,YR1998,85.7302780151367
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,1999,YR1999,85.9708404541016
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2000,YR2000,86.0588989257813
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2001,YR2001,86.2422332763672
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2002,YR2002,86.6054000854492
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2003,YR2003,87.0710906982422
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2004,YR2004,87.4223709106445
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2005,YR2005,87.3961486816406
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2006,YR2006,87.4609069824219
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2007,YR2007,87.5466766357422
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2008,YR2008,88.0105209350586
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2009,YR2009,88.1900329589844
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2010,YR2010,88.2514572143555
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2011,YR2011,88.3727416992188
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2012,YR2012,88.7789688110352
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2013,YR2013,88.9267807006836
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2014,YR2014,89.2107925415039
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2015,YR2015,89.3272705078125
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2016,YR2016,89.678337097168
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2017,YR2017,89.7974395751953
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2018,YR2018,89.775032043457
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2019,YR2019,89.9331512451172
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2020,YR2020,90.0649719238281
+"Literacy rate, adult male (% of males ages 15 and above)",SE.ADT.LITR.MA.ZS,2021,YR2021,..
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,1997,YR1997,79.0283508300781
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,1998,YR1998,80.2059478759766
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,1999,YR1999,80.5492630004883
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2000,YR2000,80.6754302978516
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2001,YR2001,80.9933700561523
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2002,YR2002,81.3953094482422
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2003,YR2003,81.92431640625
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2004,YR2004,82.3443298339844
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2005,YR2005,82.2602996826172
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2006,YR2006,82.525993347168
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2007,YR2007,82.8167572021484
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2008,YR2008,83.3397369384766
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2009,YR2009,83.6233291625977
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2010,YR2010,84.0216293334961
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2011,YR2011,84.2837677001953
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2012,YR2012,84.7296829223633
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2013,YR2013,84.9317169189453
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2014,YR2014,85.3606033325195
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2015,YR2015,85.5423202514648
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2016,YR2016,85.9855117797852
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2017,YR2017,86.2201614379883
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2018,YR2018,86.246940612793
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2019,YR2019,86.4783020019531
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2020,YR2020,86.6822128295898
+"Literacy rate, adult total (% of people ages 15 and above)",SE.ADT.LITR.ZS,2021,YR2021,..
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,1997,YR1997,3200000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,1998,YR1998,3100000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,1999,YR1999,3000000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2000,YR2000,2900000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2001,YR2001,2800000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2002,YR2002,2700000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2003,YR2003,2600000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2004,YR2004,2600000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2005,YR2005,2500000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2006,YR2006,2400000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2007,YR2007,2400000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2008,YR2008,2300000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2009,YR2009,2200000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2010,YR2010,2200000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2011,YR2011,2100000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2012,YR2012,2000000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2013,YR2013,2000000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2014,YR2014,1900000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2015,YR2015,1900000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2016,YR2016,1800000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2017,YR2017,1700000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2018,YR2018,1700000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2019,YR2019,1600000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2020,YR2020,1500000
+Adults (ages 15+) and children (ages 0-14) newly infected with HIV,SH.HIV.INCD.TL,2021,YR2021,1500000
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,1997,YR1997,0.6
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,1998,YR1998,0.6
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,1999,YR1999,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2000,YR2000,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2001,YR2001,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2002,YR2002,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2003,YR2003,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2004,YR2004,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2005,YR2005,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2006,YR2006,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2007,YR2007,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2008,YR2008,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2009,YR2009,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2010,YR2010,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2011,YR2011,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2012,YR2012,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2013,YR2013,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2014,YR2014,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2015,YR2015,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2016,YR2016,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2017,YR2017,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2018,YR2018,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2019,YR2019,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2020,YR2020,0.7
+"Prevalence of HIV, total (% of population ages 15-49)",SH.DYN.AIDS.ZS,2021,YR2021,0.7
+,,,,
+,,,,
+,,,,
+Data from database: World Development Indicators,,,,
+Last Updated: 09/16/2022,,,,

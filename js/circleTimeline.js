@@ -171,7 +171,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 50)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 50);
 
         vis.svg.append('line')
@@ -179,7 +179,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 150)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 150);
 
         vis.svg.append('line')
@@ -187,7 +187,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 250)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 250);
 
         vis.svg.append('line')
@@ -195,7 +195,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 350)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 350);
 
         vis.svg.append('line')
@@ -203,7 +203,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 450)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 450);
 
         vis.svg.append('line')
@@ -211,7 +211,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 550)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 550);
 
         vis.svg.append('line')
@@ -219,7 +219,7 @@ class VisOne {
             .style("stroke-width", 1.25)
             .attr("x1", 125)
             .attr("y1", 650)
-            .attr("x2", 1220)
+            .attr("x2", 1150)
             .attr("y2", 650);
 
         //Append a defs (for definition) element to your SVG
@@ -251,13 +251,13 @@ class VisOne {
             .attr("width", 300)
             .attr("height", 20)
             .style("fill", "url(#linear-gradient)")
-            .attr("transform", "translate(1300, 100)rotate(90)")
+            .attr("transform", "translate(1275, 100)rotate(90)")
 
         vis.legendlabel = vis.svg
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1320)
+            .attr("x", 1290)
             .attr("y", 110)
             .attr("font-size", "smaller")
             .text("High Cost")
@@ -266,7 +266,7 @@ class VisOne {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1320)
+            .attr("x", 1290)
             .attr("y", 400)
             .attr("font-size", "smaller")
             .text("Low Cost")
@@ -282,7 +282,7 @@ class VisOne {
                     return legendcircles[i]
                 }
             })
-            .attr("cx", 1290)
+            .attr("cx", 1265)
             .attr("cy", 430)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -292,7 +292,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 10)
-            .attr("cx", 1290)
+            .attr("cx", 1265)
             .attr("cy", 460)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -302,7 +302,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 20)
-            .attr("cx", 1290)
+            .attr("cx", 1265)
             .attr("cy", 500)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -312,7 +312,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 30)
-            .attr("cx", 1290)
+            .attr("cx", 1265)
             .attr("cy", 560)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -322,7 +322,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 40)
-            .attr("cx", 1290)
+            .attr("cx", 1265)
             .attr("cy", 640)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -332,7 +332,7 @@ class VisOne {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1330)
+            .attr("x", 1320)
             .attr("y", 435)
             .attr("font-size", "smaller")
             .text("Low Access")
@@ -341,7 +341,7 @@ class VisOne {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1340)
+            .attr("x", 1320)
             .attr("y", 650)
             .attr("font-size", "smaller")
             .text("High Access")

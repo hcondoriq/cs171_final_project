@@ -6,10 +6,20 @@ body {
     /*border:4px solid red;*/
 }
 
-/** {*/
-/*    margin: 0;*/
-/*    padding: 0;*/
-/*}*/
+div  {
+    font-weight: 200;
+    font-size: large;
+}
+
+div p1 {
+    font-weight: 100;
+    font-size: medium;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 .landing-page {
     display: grid;
@@ -68,7 +78,7 @@ body {
 }
 
 .color3 {
-    color: ##87476c;
+    color: #87476c;
     font-weight: 600;
 }
 

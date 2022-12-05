@@ -18,10 +18,8 @@
         <div class="landing-page">
             <img class="landing-img" src="images/cs171img.jpeg">
             <svg class="landing-title" width="100%" height="180">
-
                 <rect x="0" y="20" width="100%" height="150"
                       style="fill:#3b679e;opacity:0.6" />
-
             </svg>
             <h1 class="landing-title">Internet Access in Low-Income Countries</h1>
         </div>
@@ -66,10 +64,7 @@
 
                 <div class="col">
                     <div id="mapDiv" style="height: 71vh; width: 100%;">
-                        <p class="center titles">How has access to broadband internet changed in specific countries?</p>
-
-                        <p class="center mapbrush-instructions">Drag to rotate the globe and explore different countries!</p>
-
+                        <p class="center titles">How has access to broadband internet in specific countries changed over time?</p>
                     </div>
                     <p class="mapbrush-insight">
                         Developing/low-income regions in the world have seen increases over time, however growth
@@ -99,7 +94,6 @@
             <br>
             <br>
 
-
             <div class="row">
                 <div id="visual_educ" class="align-self-center" style="height: 60vh; width:100%">
                     <p class="center titles">How has global educational attainment changed over time?</p>
@@ -122,14 +116,22 @@
                 </ul>
 
 
+                <br>
+                <br>
+
+                <div class="row">
+                    <!--     style="height: 40%; background: white; padding-left: 0vh; padding-bottom: 1vh; padding-right: 1vh; padding-top: 0vh">-->
+                    <div id="linechart" class="align-self-center" style="height: 80vh; width:99%">
+                        <p class="center titles">New Vis</p>
+                    </div>
+                </div>
+
 
 
 
 
 
 <!--            </div>-->
-
-            <!--            </div>-->
 
             <!--            <section class="row d-flex align-items-center" id="intro2">-->
             <!--                <h1 class="intro__hed2 " style="text-align: center">Visualization II</h1>-->
@@ -164,33 +166,33 @@
                 <!--                    </article>-->
 
             </div>
+        </div>
 
 
 
 
 
 
-            <!-- Load JS libraries -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-                crossorigin="anonymous"></script>
+        <!-- Load JS libraries -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
 
 
-            <script src="https://d3js.org/d3.v7.min.js"></script>
+        <!-- OWN JS -->
+        <script src="https://d3js.org/topojson.v2.min.js"></script>
+        <script src="https://d3js.org/d3-geo.v1.min.js"></script>
 
-
-            <!-- OWN JS -->
-            <script src="https://d3js.org/topojson.v2.min.js"></script>
-            <script src="https://d3js.org/d3-geo.v1.min.js"></script>
-
-            <script src="https://unpkg.com/scrollama"></script>
-            <script src="js/main.js"></script>
-            <script src="js/visual_educ.js"></script>
-            <script src="js/mapVis.js"></script>
-            <script src="js/timelineBrushVis.js"></script>
-            <script src="js/circleTimeline.js"></script>
-            <!--        <script src="js/map_ed.js"></script>-->
-
+        <script src="https://unpkg.com/scrollama"></script>
+        <script src="js/main.js"></script>
+        <script src="js/visual_educ.js"></script>
+        <script src="js/mapVis.js"></script>
+        <script src="js/timelineBrushVis.js"></script>
+        <script src="js/circleTimeline.js"></script>
+        <script src="js/linechart.js"></script>
+<!--        <script src="js/map_ed.js"></script>-->
     </main>
 </body>
 
