@@ -15,56 +15,50 @@
 
 <body>
     <main>
-        <!-- HEADING -->
-        <section class="row d-flex align-items-center" id="intro">
-            <h1 class="intro__hed title">Internet Access in Low-Income Countries</h1>
-            <!--            <p class="intro__dek">-->
-            <!--                Educational attainment over time.-->
-            <!--            </p>-->
-        </section>
-
-
-        <!-- First Parallax Image with Logo Text -->
-        <!--        <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">-->
-        <!--            <div class="w3-display-middle" style="white-space:nowrap;">-->
-
-        <!--&lt;!&ndash;                <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>&ndash;&gt;-->
-        <!--            </div>-->
-        <!--        </div>-->
-        <div class="container-fluid image">
-            <div class="row">
-                <img src="images/cs171img.jpeg">
-            </div>
+        <div class="landing-page">
+            <img class="landing-img" src="images/cs171img.jpeg">
+            <svg class="landing-title" width="100%" height="180">
+                <rect x="0" y="20" width="100%" height="150"
+                      style="fill:#3b679e;opacity:0.6" />
+            </svg>
+            <h1 class="landing-title">Internet Access in Low-Income Countries</h1>
         </div>
 
+        <br>
+
         <div class="container-fluid">
-            <!--            // style="height: 100vh; padding-top: 1vh">-->
             <div class="row">
-                <div id="timelineBrushDiv" style="height: 30vh; width: 100%;"></div>
+                <div class="col">
+                    <div id="timelineBrushDiv" style="height: 50vh; width: 100%;">
+                        <p class="center titles">How has worldwide access to broadband internet changed over time?</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div id="mapDiv" style="height: 71vh; width: 100%;">
+                        <p class="center titles">How has access to broadband internet in specific countries changed over time?</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="row">
-                <div id="mapDiv" style="height: 71vh; width: 100%;"></div>
-            </div>
+            <br>
 
             <div class="row">
                 <!--     style="height: 40%; background: white; padding-left: 0vh; padding-bottom: 1vh; padding-right: 1vh; padding-top: 0vh">-->
                 <div id="timeline" class="align-self-center" style="height: 225%; width:125%">
-                    <p class="center">How has internet access changed over time in relation to internet cost?</p>
+                    <p class="center titles">How has internet access changed over time in relation to internet cost?</p>
                 </div>
             </div>
-            <br>
 
+            <br>
+            <br>
 
             <div class="row">
                 <div id="visual_educ" class="align-self-center" style="height: 60vh; width:100%">
-
+                    <p class="center titles">How has global educational attainment changed over time?</p>
                 </div>
 
-
-
-
-            </div>
+<!--            </div>-->
 
             <!--            <section class="row d-flex align-items-center" id="intro2">-->
             <!--                <h1 class="intro__hed2 " style="text-align: center">Visualization II</h1>-->
@@ -74,12 +68,7 @@
             <!--            </section>-->
 
             <div class="row">
-
-                <div id="map_ed" style="height: 50vh; width: 50%;">
-
-                </div>
-
-
+                <div id="map_ed" style="height: 50vh; width: 50%;"></div>
 
                 <!--                    <article>-->
                 <!--                        <div class="step" data-step="1">-->
@@ -122,7 +111,6 @@
         <!-- OWN JS -->
         <script src="https://d3js.org/topojson.v2.min.js"></script>
         <script src="https://d3js.org/d3-geo.v1.min.js"></script>
-        <!--        <script src="main.js"></script>-->
 
         <script src="https://unpkg.com/scrollama"></script>
         <script src="js/main.js"></script>
@@ -130,7 +118,7 @@
         <script src="js/mapVis.js"></script>
         <script src="js/timelineBrushVis.js"></script>
         <script src="js/circleTimeline.js"></script>
-        <script src="js/map_ed.js"></script>
+<!--        <script src="js/map_ed.js"></script>-->
     </main>
 </body>
 
