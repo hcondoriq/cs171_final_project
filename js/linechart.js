@@ -34,37 +34,37 @@ class LineVis {
         vis.svg.append('line')
             .style("stroke", "steelblue")
             .style("stroke-width", 4.25)
-            .attr("x1", 1200)
-            .attr("y1", 500)
-            .attr("x2", 1250)
-            .attr("y2", 500);
+            .attr("x1", 800)
+            .attr("y1", 50)
+            .attr("x2", 900)
+            .attr("y2", 50);
 
         // append legend
         vis.svg.append('line')
-            .style("stroke", "black")
+            .style("stroke", "red")
             .style("stroke-width", 4.25)
-            .attr("x1", 1200)
-            .attr("y1", 600)
-            .attr("x2", 1250)
-            .attr("y2", 600);
+            .attr("x1", 800)
+            .attr("y1", 70)
+            .attr("x2", 900)
+            .attr("y2", 70);
 
         vis.legendlabel = vis.svg
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1200)
-            .attr("y", 525)
+            .attr("x", 600)
+            .attr("y", 55)
             .attr("font-size", "smaller")
-            .text("Patent Applications (in 10,000s")
+            .text("Patent Applications (in 10,000s)")
 
         vis.legendlabel2 = vis.svg
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1200)
-            .attr("y", 625)
+            .attr("x", 500)
+            .attr("y", 75)
             .attr("font-size", "smaller")
-            .text("Female literacy rate (in .1%")
+            .text("Fixed broadband subscriptions (per 100 people)")
 
         // scales and axes
         vis.x = d3.scaleTime()
@@ -156,7 +156,7 @@ class LineVis {
         vis.svg.append("path")
             .datum(vis.patents)
             .attr("fill", "none")
-            .attr("stroke", "black")
+            .attr("stroke", "steelblue")
             .attr("stroke-width", 1.5)
             .attr("d", d3.line()
                 .x(function(d) { return vis.x(d["Year"]) })
@@ -178,7 +178,7 @@ class LineVis {
             .datum(vis.broadband)
             .attr("fill", "none")
             .attr("stroke", "red")
-            .attr("stroke-width", 3.5)
+            .attr("stroke-width", 1.5)
             .attr("d", d3.line()
                 .x(function(d) { return vis.x(d["Year"]) })
                 .y(function(d) { return vis.y(d["Fixed Broadband Subscriptions"]) })
@@ -187,7 +187,7 @@ class LineVis {
         // append x-axis
         vis.svg.append("g")
             .attr("class", "x-axis axis")
-            .attr("transform", "translate(20," + vis.height + ")")
+            .attr("transform", "translate(0," + vis.height + ")")
             .call(vis.xAxis);
 
         // append y-axis
@@ -202,7 +202,7 @@ class LineVis {
             .attr("x", 10)
             .attr("y", 15)
             .attr("class", "timeline-axis-title")
-            .text("Key Indicator");
+            .text("Patents / Broadband Subscriptions");
 
     }
 }
