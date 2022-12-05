@@ -37,7 +37,7 @@ class VisOne {
         // color scale (to implement later)
         vis.colorScale = d3.scaleLinear()
             .range(["#01871e", "#FF0000"])
-            .domain([0, 45])
+            .domain([0, 50])
 
         console.log("color scale", vis.colorScale)
 
