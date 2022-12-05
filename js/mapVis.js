@@ -33,23 +33,29 @@ class MapVis {
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
         // init drawing area
+        // vis.svg = d3.select("#" + vis.parentElement).append("svg")
+        //     .attr("width", vis.width)
+        //     .attr("height", vis.height)
+        //     .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
+
         vis.svg = d3.select("#" + vis.parentElement).append("svg")
-            .attr("width", vis.width)
-            .attr("height", vis.height)
-            .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
+            .attr("width", vis.width + vis.margin.left + vis.margin.right)
+            .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
         // add title
-        vis.svg.append('g')
-            .attr('class', 'title')
-            .attr('id', 'map-title')
-            .append('text')
-            .text('How has access to broadband internet in specific countries changed over time?')
-            .attr('transform', `translate(${vis.width / 2}, 20)`)
-            .attr('text-anchor', 'middle');
+        // vis.svg.append('g')
+        //     .attr('class', 'title')
+        //     .attr('id', 'map-title')
+        //     .append('text')
+        //     .text('How has access to broadband internet in specific countries changed over time?')
+        //     .attr('transform', `translate(${vis.width / 2}, 10)`)
+        //     .attr('text-anchor', 'middle');
 
         // referencing code from the lab for submission_week9
         vis.projection = d3.geoOrthographic()
-            .translate([vis.width / 2, vis.height / 2])
+            .translate([vis.width / 2, vis.height / 2.5])
             .scale(200);
 
         vis.path = d3.geoPath()
@@ -103,6 +109,46 @@ class MapVis {
             .attr('id', 'mapTooltip')
 
         // add legend
+        vis.legend = vis.svg.append("g")
+            .attr('class', 'legend')
+            .attr('transform', `translate(490, 380)`)
+
+        vis.legendScale = d3.scaleBand()
+            .rangeRound([0, 200])
+            // .padding(0.25)
+            .domain(vis.colors.map( (d, i) => ["<0.5", "0.5-5", "5-15", ">15"][i]));
+
+        vis.legend.selectAll()
+            .data(vis.colors)
+            .enter()
+            .append("rect")
+            .attr("x", (d, i) => {
+                return i * vis.legendScale.bandwidth();
+            })
+            .attr("width", vis.legendScale.bandwidth())
+            .attr("height", 10)
+            .attr("fill", (d, i) => {
+                return vis.colors[i];
+            })
+
+        vis.xAxis = d3.axisBottom()
+            .scale(vis.legendScale);
+
+        vis.svg.append("g")
+            .attr("class", "x-axis axis")
+            .attr('transform', `translate(490, 390)`)
+
+        // append legend title
+        vis.legendTitle = vis.svg.append("g")
+            .attr("id", "legend-title")
+            .append("text")
+            .text("Fixed Broadband Subscriptions (per 100 people)")
+            .attr('transform', `translate(490, 375)`)
+            .attr("text-anchor", 'left')
+            .attr("font-size", 9)
+            .attr("font-weight", 9)
+
+        vis.svg.select(".x-axis").call(vis.xAxis);
 
         vis.wrangleData();
     }
@@ -143,15 +189,15 @@ class MapVis {
 
         // assign colors based on broadband avg
         if (!broadbandAverage) {
-            return '#000000'
+            return ['#000000', "No data available"]
         } else if (broadbandAverage >= 15) {
-            return vis.colors[3]
+            return [vis.colors[3], vis.tempBroadbandAvg]
         } else if (broadbandAverage >= 5) {
-            return vis.colors[2]
+            return [vis.colors[2], vis.tempBroadbandAvg]
         } else if (broadbandAverage >= 0.5) {
-            return vis.colors[1]
+            return [vis.colors[1], vis.tempBroadbandAvg]
         } else {
-            return vis.colors[0]
+            return [vis.colors[0], vis.tempBroadbandAvg]
         }
     }
 
@@ -171,7 +217,7 @@ class MapVis {
         vis.countryInfo = {};
 
         // create variable that will temporarily hold broadband average for a certain country
-        vis.tempBroadbandAvg;
+        // vis.tempBroadbandAvg;
 
         // iterate through the list of countries in the geoData
         vis.geoData.objects.countries.geometries.forEach(d => {
@@ -181,11 +227,20 @@ class MapVis {
 
             // check if the country is in the broadband data set, and if so call assignColor()
             if (vis.countriesBroadbandSet.has(geoCountryName)) {
+                vis.returnValues = vis.assignColor(geoCountryName);
+                // console.log("returnvalueee", vis.returnValue)
+                // console.log("tempbroadbandavg",  vis.tempBroadbandAvg)
+
                 vis.countryInfo[d.properties.name] = {
                     name: d.properties.name,
-                    color: vis.assignColor(geoCountryName),
-                    avg: vis.tempBroadbandAvg
+                    color: vis.returnValues[0],
+                    avg: vis.returnValues[1]
                 }
+                // vis.countryInfo[d.properties.name] = {
+                //     name: d.properties.name,
+                //     color: vis.assignColor(geoCountryName),
+                //     avg: vis.tempBroadbandAvg
+                // }
 
             // if country not in the set, assign the color black
             } else {
@@ -221,8 +276,8 @@ class MapVis {
                     .html(`
                 <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 10px">
                      <h4>${vis.countryInfo[d.properties.name].name}<h4>   
-                     <h5> Avg. Fixed Broadbrand Subscriptions (per 100 people): ${vis.countryInfo[d.properties.name].avg}</h5>
-                     <h5>(${vis.startYear}-${vis.endYear})</h5>
+                     <h5>Avg. Fixed Broadbrand Subscriptions (per 100 people): ${vis.countryInfo[d.properties.name].avg}</h5>
+                     <h5>Selected Time Period: ${vis.startYear}-${vis.endYear}</h5>
                 </div>`);
             })
             .on('mouseout', function(event, d){

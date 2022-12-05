@@ -1,6 +1,82 @@
 body {
     font-family: "Franklin Gothic Book";
+    /*display: flex;*/
+    /*justify-content: center;*/
+    overflow-x:hidden;
+    /*border:4px solid red;*/
 }
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+.landing-page {
+    display: grid;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.landing-img {
+    width: 100%;
+}
+
+.landing-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bolder;
+    font-size: 45px;
+}
+
+.col {
+    margin: 15px;
+}
+
+.titles {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.broadband-text {
+    padding-right: 20px;
+    padding-left: 40px;
+    font-size: 17px;
+}
+
+.mapbrush-instructions {
+    margin:0;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.mapbrush-insight {
+    margin: 10px;
+}
+
+.color1 {
+    color: #e681c5;
+    font-weight: 600;
+}
+
+.color2 {
+    color: #c568a0;
+    font-weight: 600;
+}
+
+.color3 {
+    color: ##87476c;
+    font-weight: 600;
+}
+
+.color4 {
+    color: #40213c;
+    font-weight: 900;
+}
+
 
 
 .axis line,
