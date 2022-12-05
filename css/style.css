@@ -142,8 +142,8 @@ div p1 {
 }
 
 .conclusion-content {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin: 40px;
+}
 
 .axis line,
 .axis path {
