@@ -141,6 +141,10 @@ div p1 {
     padding-top: 120px;
 }
 
+.conclusion-content {
+    margin-right: 20px;
+    margin-left: 20px;
+
 .axis line,
 .axis path {
     fill: none;
