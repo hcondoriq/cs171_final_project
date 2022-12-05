@@ -51,7 +51,7 @@ class visEduc {
         //     .attr('transform', `translate(${vis.width / 2}, -5)`)
         //     .attr('text-anchor', 'middle');
 
-        vis.fig_fact = 0.67
+        vis.fig_fact = 0.75
         // axis groups
         vis.xAxisGroup = vis.svg.append('g')
             .attr('class', 'axis x-axis')
@@ -79,37 +79,37 @@ class visEduc {
             .attr("width", 100)
             .attr("height", 20)
             .style("fill", "#04B46A")
-            .attr("transform", `translate(${vis.width * 0.7}, 0) rotate(90)`)
+            .attr("transform", `translate(${vis.width * 0.8}, 0) rotate(90)`)
         vis.svg.append("rect")
             .attr("width", 100)
             .attr("height", 20)
             .style("fill", "#437983")
-            .attr("transform", `translate(${vis.width * 0.7}, 100) rotate(90)`)
+            .attr("transform", `translate(${vis.width * 0.8}, 100) rotate(90)`)
         vis.svg.append("rect")
             .attr("width", 100)
             .attr("height", 20)
             .style("fill", "#D4B46A")
-            .attr("transform", `translate(${vis.width * 0.7}, 200) rotate(90)`)
+            .attr("transform", `translate(${vis.width * 0.8}, 200) rotate(90)`)
 
         vis.svg
             .append("text")
             .attr("class", "legend_ed")
             .attr("fill", "black")
-            .attr("x", vis.width * 0.702)
+            .attr("x", vis.width * 0.802)
             .attr("y", 50)
             .text("Secondary education")
         vis.svg
             .append("text")
             .attr("class", "legend_ed")
             .attr("fill", "black")
-            .attr("x", vis.width * 0.702)
+            .attr("x", vis.width * 0.802)
             .attr("y", 150)
             .text("Primary education")
         vis.svg
             .append("text")
             .attr("class", "legend_ed")
             .attr("fill", "black")
-            .attr("x", vis.width * 0.702)
+            .attr("x", vis.width * 0.802)
             .attr("y", 250)
             .text("No schooling")
         vis.tooltip = d3.select("body").append('div')
@@ -187,7 +187,7 @@ class visEduc {
                                         border-radius: 5px; background: #e6e6e6; padding: 20px">
                             <h4>Category: Only primary education </h4>
                             <h4>Year: ${d.year}</h4>
-                            <h4>Education Level: ${d.prim_school.toFixed(2)} </h4>
+                            <h4>Education Level: ${d.prim_school.toFixed(2)} % </h4>
                             </div>`);
                     })
                     .on('mouseout', function (event, d) {
@@ -242,7 +242,7 @@ class visEduc {
                                         border-radius: 5px; background: #e6e6e6; padding: 20px">
                             <h4>Category: No schooling </h4>
                             <h4>Year: ${d.year}</h4>
-                            <h4>Education Level: ${d.no_school.toFixed(2)} </h4>
+                            <h4>Education Level: ${d.no_school.toFixed(2)} %</h4>
                             </div>`);
                     })
                     .on('mouseout', function (event, d) {
@@ -294,7 +294,7 @@ class visEduc {
                                         border-radius: 5px; background: #e6e6e6; padding: 20px">
                             <h4>Category: Secondary education </h4>
                             <h4>Year: ${d.year}</h4>
-                            <h4>Education Level: ${d.sec_school.toFixed(2)} </h4>
+                            <h4>Education Level: ${d.sec_school.toFixed(2)} %</h4>
                             </div>`);
                     })
                     .on('mouseout', function (event, d) {
