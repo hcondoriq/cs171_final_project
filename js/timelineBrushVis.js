@@ -40,7 +40,7 @@ class TimelineBrushVis {
         //     .attr('transform', `translate(${vis.width / 2}, 0)`)
         //     .attr('text-anchor', 'middle');
 
-
+        console.log("what's different", vis.worldBroadbandData)
         // scales and axes
         vis.x = d3.scaleTime()
             .range([0, vis.width])
@@ -114,7 +114,7 @@ class TimelineBrushVis {
     wrangleData() {
         let vis = this;
 
-        console.log(vis.worldBroadbandData)
+        console.log("broadband", vis.worldBroadbandData)
         // vis.worldBroadbandData.forEach(d => {
         //     console.log(d)
         // })

@@ -21,6 +21,8 @@ let myTimelineBrushVis;
 
 let myvisEduc;
 
+let myLineVis;
+
 
 // load data using promises
 let promises = [
@@ -144,7 +146,11 @@ let promises = [
         row[2021] = +row[2021]
         return row
     }),
+    d3.json("data/literacy.json"),
+    d3.json("data/patents.json"),
     d3.csv("data/YoungPeople_HIV_171.csv", row => {
+        // row["1990 [YR1990]"] = +row["1990 [YR1990]"]
+        // console.log("this is row", row)
         return row
     })
 ];
@@ -191,6 +197,7 @@ function initMainPage(allDataArray) {
     myMapVis = new MapVis('mapDiv', allDataArray[2], allDataArray[3])
     myTimelineBrushVis = new TimelineBrushVis('timelineBrushDiv', allDataArray[4].years, eventHandler)
     myVisOne = new VisOne('timeline', allDataArray[5], allDataArray[6])
+    myLineVis = new LineVis('linechart', allDataArray[7].years, allDataArray[8].years, allDataArray[4].years)
 
     // bind event handler
     eventHandler.bind("selectionChanged", function(event){
