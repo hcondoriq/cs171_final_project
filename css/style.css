@@ -107,10 +107,16 @@ div p1 {
     color: steelblue;
 }
 
-.bold {
+.purple-bold {
     font-weight: 600;
     color: #c568a0
 }
+
+.bold {
+    font-weight: 600;
+    text-align: center;
+}
+
 .stackedbars-insight {
     margin-right: 50px;
     margin-left: 70px;
