@@ -102,6 +102,20 @@ div p1 {
     font-weight: 600;
 }
 
+.stackedbars-insight {
+    margin-right: 50px;
+    margin-left: 70px;
+}
+
+.noschool-color {
+    color: #D4B46A;
+    font-weight: 900;
+}
+
+.secondaryschool-color {
+    color: #04B46A;
+    font-weight: 900;
+}
 
 .axis line,
 .axis path {
