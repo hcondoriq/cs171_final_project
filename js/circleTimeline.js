@@ -96,67 +96,6 @@ class VisOne {
         })
         console.log("display data", vis.displayData)
 
-        // vis.displayData2 = []
-        // vis.secondArray.forEach(function (d) {
-        //     let pushData = {
-        //         // region: d.Region,
-        //         access_years: {
-        //             "0": d[2008],
-        //             "1": d[2009],
-        //             "2": d[2010],
-        //             "3": d[2011],
-        //             "4": d[2012],
-        //             "5": d[2013],
-        //             "6": d[2014],
-        //             "7": d[2015],
-        //             "8": d[2016],
-        //             "9": d[2017],
-        //             "10": d[2018],
-        //             "11": d[2019],
-        //             "12": d[2020],
-        //             "13": d[2021]
-        //             // "0": d[1990],
-        //             // "1": d[1991],
-        //             // "2": d[1992],
-        //             // "3": d[1993],
-        //             // "4": d[1994],
-        //             // "5": d[1995],
-        //             // "6": d[1996],
-        //             // "7": d[1997],
-        //             // "8": d[1998],
-        //             // "9": d[1999],
-        //             // "10": d[2000],
-        //             // "11": d[2001],
-        //             // "12": d[2002],
-        //             // "13": d[2003],
-        //             // "14": d[2004],
-        //             // "15": d[2005],
-        //             // "16": d[2006],
-        //             // "17": d[2007],
-        //             // "18": d[2008],
-        //             // "19": d[2009],
-        //             // "20": d[2010],
-        //             // "21": d[2011],
-        //             // "22": d[2012],
-        //             // "23": d[2013],
-        //             // "24": d[2014],
-        //             // "25": d[2015],
-        //             // "26": d[2016],
-        //             // "27": d[2017],
-        //             // "28": d[2018],
-        //             // "29": d[2019],
-        //             // "30": d[2020],
-        //             // "31": d[2021],
-        //         },
-        //         // income_class: d.Income_2021,
-        //         // measure: d.Baskets_combined_simplified,
-        //         // region: d.ITURegion,
-        //         // unit: d.unit
-        //     }
-        //     vis.displayData2.push(pushData)
-        // })
-        //
-        // console.log("second display data", vis.displayData2)
 
         vis.sampleData = vis.displayData.filter(function (d) {
             // console.log("FILTER INFO", d)
@@ -251,13 +190,13 @@ class VisOne {
             .attr("width", 300)
             .attr("height", 20)
             .style("fill", "url(#linear-gradient)")
-            .attr("transform", "translate(1275, 100)rotate(90)")
+            .attr("transform", "translate(1255, 100)rotate(90)")
 
         vis.legendlabel = vis.svg
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1290)
+            .attr("x", 1270)
             .attr("y", 110)
             .attr("font-size", "smaller")
             .text("High Cost")
@@ -266,7 +205,7 @@ class VisOne {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1290)
+            .attr("x", 1270)
             .attr("y", 400)
             .attr("font-size", "smaller")
             .text("Low Cost")
@@ -282,7 +221,7 @@ class VisOne {
                     return legendcircles[i]
                 }
             })
-            .attr("cx", 1265)
+            .attr("cx", 1245)
             .attr("cy", 430)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -292,7 +231,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 10)
-            .attr("cx", 1265)
+            .attr("cx", 1245)
             .attr("cy", 460)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -302,7 +241,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 20)
-            .attr("cx", 1265)
+            .attr("cx", 1245)
             .attr("cy", 500)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -312,7 +251,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 30)
-            .attr("cx", 1265)
+            .attr("cx", 1245)
             .attr("cy", 560)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -322,7 +261,7 @@ class VisOne {
             .append("circle")
             .data(legendcircles)
             .attr("r", 40)
-            .attr("cx", 1265)
+            .attr("cx", 1245)
             .attr("cy", 640)
             .attr("fill", "none")
             .attr("stroke", "black")
@@ -332,7 +271,7 @@ class VisOne {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1320)
+            .attr("x", 1295)
             .attr("y", 435)
             .attr("font-size", "smaller")
             .text("Low Access")
@@ -341,7 +280,7 @@ class VisOne {
             .append("text")
             .attr("class", "legend")
             .attr("fill", "black")
-            .attr("x", 1320)
+            .attr("x", 1295)
             .attr("y", 650)
             .attr("font-size", "smaller")
             .text("High Access")
