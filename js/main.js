@@ -165,6 +165,14 @@ Promise.all(promises)
             d["Year"] = parseDate(d["Year"].toString());
         });
 
+        data[7].years.forEach(function(d){
+            d["Year"] = parseDate(d["Year"].toString());
+        });
+
+        data[8].years.forEach(function(d){
+            d["Year"] = parseDate(d["Year"].toString());
+        });
+
 
         console.log("check out the data", data[1])
         console.log("mayowa's data", data[5])

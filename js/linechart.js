@@ -18,7 +18,7 @@ class LineVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 20, right: 20, bottom: 20, left: 10};
+        vis.margin = {top: 20, right: 40, bottom: 20, left: 10};
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
 
@@ -28,7 +28,6 @@ class LineVis {
             .attr("height", vis.height + vis.margin.top + vis.margin.bottom)
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`)
             .append("g");
-
 
 
         // append legend
@@ -66,6 +65,22 @@ class LineVis {
             .attr("y", 625)
             .attr("font-size", "smaller")
             .text("Female literacy rate (in .1%")
+
+        // scales and axes
+        vis.x = d3.scaleTime()
+            .range([20, vis.width])
+            .domain(d3.extent(vis.patents, function(d) { return d["Year"]; }));
+
+        vis.y = d3.scaleLinear()
+            .range([vis.height, 20])
+            // .domain([0, d3.max(vis.patents, function(d) { return d["Resident Patents"]; })]);
+            .domain([0, 30])
+        vis.xAxis = d3.axisBottom()
+            .scale(vis.x)
+
+        vis.yAxis = d3.axisLeft()
+            .scale(vis.y);
+
 
         vis.wrangleData()
     }
@@ -137,22 +152,6 @@ class LineVis {
 
         console.log("use data", vis.broadband)
 
-
-        // scales and axes
-        vis.x = d3.scaleTime()
-            .range([0, vis.width])
-            .domain(d3.extent(vis.patents, function(d) { return d["Year"]; }));
-
-        vis.y = d3.scaleLinear()
-            .range([vis.height, 0])
-            // .domain([0, d3.max(vis.patents, function(d) { return d["Resident Patents"]; })]);
-            .domain([0, 30])
-        vis.xAxis = d3.axisBottom()
-            .scale(vis.x)
-
-        vis.yAxis = d3.axisLeft()
-            .scale(vis.y);
-
         // Add the line
         vis.svg.append("path")
             .datum(vis.patents)
@@ -164,21 +163,22 @@ class LineVis {
                 .y(function(d) { return vis.y(d["Resident Patents"]) })
             )
 
-        vis.svg.append("path")
-            .datum(vis.literacy)
-            .attr("fill", "none")
-            .attr("stroke", "steelblue")
-            .attr("stroke-width", 1.5)
-            .attr("d", d3.line()
-                .x(function(d) { return vis.x(d["Year"]) })
-                .y(function(d) { return vis.y(d["Female Literacy"]) })
-            )
+        // vis.svg.append("path")
+        //     .datum(vis.literacy)
+        //     .attr("fill", "none")
+        //     .attr("stroke", "steelblue")
+        //     .attr("stroke-width", 1.5)
+        //     .attr("d", d3.line()
+        //         .x(function(d) { return vis.x(d["Year"]) })
+        //         .y(function(d) { return vis.y(d["Female Literacy"]) })
+        //     )
 
+        console.log("is broadband here?", vis.broadband)
         vis.svg.append("path")
             .datum(vis.broadband)
             .attr("fill", "none")
             .attr("stroke", "red")
-            .attr("stroke-width", 1.5)
+            .attr("stroke-width", 3.5)
             .attr("d", d3.line()
                 .x(function(d) { return vis.x(d["Year"]) })
                 .y(function(d) { return vis.y(d["Fixed Broadband Subscriptions"]) })
@@ -187,7 +187,7 @@ class LineVis {
         // append x-axis
         vis.svg.append("g")
             .attr("class", "x-axis axis")
-            .attr("transform", "translate(0," + vis.height + ")")
+            .attr("transform", "translate(20," + vis.height + ")")
             .call(vis.xAxis);
 
         // append y-axis
@@ -204,44 +204,5 @@ class LineVis {
             .attr("class", "timeline-axis-title")
             .text("Key Indicator");
 
-        // Add X axis --> it is a date format
-        // let years = [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
-        // vis.x = d3.scaleLinear()
-        //     .domain(d3.extent(years))
-        //     // .domain(vis.useData.years["1997"], vis.useData.years["2021"])
-        //     .range([ 0, vis.width ]);
-        //
-        // vis.svg.append("g")
-        //     .attr("transform", "translate(0," + vis.height + ")")
-        //     .call(d3.axisBottom(vis.x));
-        //
-        //
-        // // Add Y axis
-        // vis.y = d3.scaleLinear()
-        //     // .domain([0, d3.max(vis.useData, function(d) { return +d.value; })])
-        //     .domain([0, 1000000])
-        //     .range([ vis.height, 0 ]);
-        // vis.svg.append("g")
-        //     .attr("translate", )
-        //     .call(d3.axisLeft(vis.y));
-        //
-        // vis.interest = [vis.useData.years]
-        // console.log("is this working", vis.interest)
-        // vis.usingData = vis.interest[0]
-        // console.log("is this working", vis.usingData)
-        // console.log("is this working", vis.usingData[1997])
-        // console.log("scale info", vis.x(1999))
-        //
-        // for(let i = 1997; i < 2022; i++) {
-        //     vis.svg.append("path")
-        //         .datum(vis.usingData)
-        //         .attr("fill", "none")
-        //         .attr("stroke", "steelblue")
-        //         .attr("stroke-width", 1.5)
-        //         .attr("d", d3.line()
-        //             .x(vis.x(i))
-        //             .y(vis.y(vis.usingData[i]))
-        //         )
-        // }
     }
 }
