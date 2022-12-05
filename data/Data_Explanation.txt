@@ -1,2 +1,5 @@
 Our data fields come from the World Bank Development Indicators as well as the
-International Telecommunication Union's ICT Price Baskets.
+International Telecommunication Union's ICT Price Baskets. The first set of data arrays are
+related to educational attainment in developing countries, the second set are broadband subscriptions from the World Bank
+and ICT respectively, and the last set are JSON files on indicators such as literacy and patent applications
+issued worldwide.
