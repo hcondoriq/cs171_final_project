@@ -22,7 +22,7 @@ class visEduc {
 
 
 
-        vis.margin = { top: 20, right: 20, bottom: 20, left: 50 };
+        vis.margin = { top: 20, right: 20, bottom: 100, left: 50 };
         // vis.width = 1300 - vis.margin.left - vis.margin.right;
         // vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height - vis.margin.top - vis.margin.bottom;
         // vis.height = 500 - vis.margin.top - vis.margin.bottom;
