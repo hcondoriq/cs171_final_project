@@ -29,7 +29,7 @@ let promises = [
     d3.csv("data/educ_att_prim_aggreg.csv"),
     d3.csv("data/educ_att_sec_aggreg.csv"),
     d3.csv("data/fixed-broadband-subscriptions.csv"), // broadbandData
-    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-10m.json"), // geoData
+    d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"), // geoData
     d3.json("data/world-broadband.json"), // worldBroadbandData,
     d3.csv("data/ICTMedianBaskets.csv", row => {
         // console.log("median baskets", row)
