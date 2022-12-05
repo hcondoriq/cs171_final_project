@@ -106,9 +106,6 @@ let promises = [
         row[12] = +row[12]
 
 
-
-
-
         return row
     }),
     d3.csv("data/InternetUse_Region.csv", row => {
@@ -149,8 +146,6 @@ let promises = [
     d3.json("data/literacy.json"),
     d3.json("data/patents.json"),
     d3.csv("data/YoungPeople_HIV_171.csv", row => {
-        // row["1990 [YR1990]"] = +row["1990 [YR1990]"]
-        // console.log("this is row", row)
         return row
     })
 ];

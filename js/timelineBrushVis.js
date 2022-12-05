@@ -31,14 +31,6 @@ class TimelineBrushVis {
             .append("g")
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
-        // add title
-        // vis.svg.append('g')
-        //     .attr('class', 'title')
-        //     .attr('id', 'timeline-brush-title')
-        //     .append('text')
-        //     .text('How has worldwide access to broadband internet changed over time?')
-        //     .attr('transform', `translate(${vis.width / 2}, 0)`)
-        //     .attr('text-anchor', 'middle');
 
         console.log("what's different", vis.worldBroadbandData)
         // scales and axes
@@ -91,7 +83,6 @@ class TimelineBrushVis {
         // initialize brushing component
         vis.brush = d3.brushX()
             .extent([[0, 0], [vis.width, vis.height]])
-            // .on("brush", brushed);
             .on("brush", function(event){
                 // user selected a specific region
                 vis.currentBrushRegion = event.selection;
@@ -115,9 +106,6 @@ class TimelineBrushVis {
         let vis = this;
 
         console.log("broadband", vis.worldBroadbandData)
-        // vis.worldBroadbandData.forEach(d => {
-        //     console.log(d)
-        // })
 
         vis.updateVis();
     }

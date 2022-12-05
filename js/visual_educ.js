@@ -42,14 +42,6 @@ class visEduc {
             .attr('height', vis.height + vis.margin.top + vis.margin.bottom)
             .append('g')
             .attr('transform', `translate (${vis.margin.left}, ${vis.margin.top})`);
-        // add title
-        // vis.svg.append('g')
-        //     .attr('class', 'title bar-title')
-        //     .attr("id", vis.bar_id)
-        //     .append('text')
-        //     .text("How has educational attainment changed over time?")
-        //     .attr('transform', `translate(${vis.width / 2}, -5)`)
-        //     .attr('text-anchor', 'middle');
 
         vis.fig_fact = 0.75
         // axis groups
@@ -116,9 +108,6 @@ class visEduc {
             .attr('class', "tooltip")
             .attr('id', 'EduTooltip')
         vis.wrangleData()
-
-
-
 
 
 

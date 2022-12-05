@@ -178,11 +178,6 @@ class MapVis {
             }
         })
 
-        // console.log("list", listofavgs)
-        // listofavgs.sort(function(a, b){return b - a})
-        // console.log("sorted list", listofavgs)
-
-
         // calculate the average broadband by summing the values in the array and dividing by array length
         let broadbandAverage = d3.sum(broadbandArray) / broadbandArray.length
         vis.tempBroadbandAvg = broadbandAverage.toFixed(6)
@@ -216,8 +211,6 @@ class MapVis {
         // create dictionary that will hold data for each country
         vis.countryInfo = {};
 
-        // create variable that will temporarily hold broadband average for a certain country
-        // vis.tempBroadbandAvg;
 
         // iterate through the list of countries in the geoData
         vis.geoData.objects.countries.geometries.forEach(d => {
@@ -236,11 +229,6 @@ class MapVis {
                     color: vis.returnValues[0],
                     avg: vis.returnValues[1]
                 }
-                // vis.countryInfo[d.properties.name] = {
-                //     name: d.properties.name,
-                //     color: vis.assignColor(geoCountryName),
-                //     avg: vis.tempBroadbandAvg
-                // }
 
             // if country not in the set, assign the color black
             } else {
@@ -298,23 +286,11 @@ class MapVis {
     onSelectionChange(selectionStart, selectionEnd) {
         let vis = this;
 
-        // console.log("start range", selectionStart)
-        // console.log("end range", selectionEnd)
-        //
-        // console.log("start range YEAR", selectionStart.getFullYear())
 
         // set the start and years equal to the selected range
         vis.startYear = selectionStart.getFullYear();
         vis.endYear = selectionEnd.getFullYear();
 
-            // .toString()
-
-        // Filter original unfiltered data depending on selected time period (brush)
-
-        // *** TO-DO ***
-        // vis.filteredData = vis.broadbandData.filter(function(d) {
-        //     return d.time >= selectionStart && d.time <= selectionEnd
-        // })
 
         vis.wrangleData();
     }

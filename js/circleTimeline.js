@@ -300,83 +300,6 @@ class VisOne {
         // create rows per family object
         vis.rows = vis.svg.selectAll(".matrix-row")
             .data(vis.sampleData)
-        //
-        // for(let i = 0; i < 14; i++) {
-        //         // console.log(vis.displayData2[i].years)
-        //     vis.areaCell = vis.svg.selectAll()
-        //         .data(vis.sampleData)
-        //         .enter().append("circle")
-        //         .attr("r", (d) => {
-        //             // console.log("hmm", d.years, i)
-        //             if (d.years[i] > 70) {
-        //                 return 30
-        //             }
-        //             else if(d.years[i] == 0) {
-        //                 return 5
-        //             }
-        //             else {
-        //                 return (d.years[i]) * 0.5
-        //             }
-        //         })
-        //         .attr("cy", (d, i) => {
-        //             return 50 + i * 100
-        //         })
-        //         .attr("cx", 150 + 80*i)
-        //         .attr("fill", (d) => {
-        //             // console.log("d,i?", d, i)
-        //             if (d.years[i] == 0) {
-        //                 return "#FAF9F6"
-        //             }
-        //             else {
-        //                 // console.log("hey again", d.access, i)
-        //                 let value = d.access[i]
-        //                 return vis.colorScale(value)
-        //             }
-        //         })
-        //         // change fill for those circles with no values
-        //         .attr("stroke", "black")
-        //         .on('mouseover', function(event, d){
-        //
-        //         console.log("d", d)
-        //         let circleName = d.name
-        //         // vis.sampleData.forEach()
-        //         vis.sampleData.forEach(row => {
-        //             // console.log("D.STATE", d)
-        //             if (row.name === circleName) {
-        //                 // console.log("row", row)
-        //                 d3.select(this)
-        //                     .attr('stroke-width', '5px')
-        //                     .attr('stroke', 'black')
-        //                     // .attr('fill', 'black')
-        //                 vis.tooltip
-        //                     .style("opacity", 1)
-        //                     .style("left", event.pageX + 20 + "px")
-        //                     .style("top", event.pageY + "px")
-        //                     .html(`
-        // <div style="border: thin solid grey; border-radius: 5px; background: lightgrey; padding: 20px">
-        //     <h3>Region: ${d.region}<h3>
-        //     <h4>Internet Cost: $${d.years[i]}</h4>
-        //     <h4>Broadband Subscriptions (per 100 people): ${d.access[i]}</h4>
-        //
-        // </div>`);
-        //             }
-        //         })
-        //
-        //     })
-        //         .on('mouseout', function(event, d) {
-        //             d3.select(this)
-        //                 .attr('stroke-width', '1px')
-        //                 .attr("fill", (d) => {
-        //                     console.log("access", d.access[i])
-        //                     return vis.colorScale(d.access[i])
-        //                 })
-        //             vis.tooltip
-        //                 .style("opacity", 0)
-        //                 .style("left", 0)
-        //                 .style("top", 0)
-        //                 .html(``);
-        //         })
-        // }
 
         for(let i = 0; i < 14; i++) {
             // console.log(vis.displayData2[i].years)
@@ -384,7 +307,6 @@ class VisOne {
                 .data(vis.sampleData)
                 .enter().append("circle")
                 .attr("r", (d) => {
-                    // console.log("hmm", d.years, i)
                     if (d.access[i] > 70) {
                         return 30
                     }
@@ -400,12 +322,10 @@ class VisOne {
                 })
                 .attr("cx", 150 + 80*i)
                 .attr("fill", (d) => {
-                    // console.log("d,i?", d, i)
                     if (d.access[i] == 0) {
                         return "#FAF9F6"
                     }
                     else {
-                        // console.log("hey again", d.access, i)
                         let value = d.years[i]
                         return vis.colorScale(value)
                     }
@@ -416,15 +336,11 @@ class VisOne {
 
                     console.log("d", d)
                     let circleName = d.name
-                    // vis.sampleData.forEach()
                     vis.sampleData.forEach(row => {
-                        // console.log("D.STATE", d)
                         if (row.name === circleName) {
-                            // console.log("row", row)
                             d3.select(this)
                                 .attr('stroke-width', '5px')
                                 .attr('stroke', 'black')
-                            // .attr('fill', 'black')
                             vis.tooltip
                                 .style("opacity", 1)
                                 .style("left", event.pageX + 20 + "px")
@@ -444,7 +360,6 @@ class VisOne {
                     d3.select(this)
                         .attr('stroke-width', '1px')
                         .attr("fill", (d) => {
-                            // console.log("access", d.access[i])
                             return vis.colorScale(d.years[i])
                         })
                     vis.tooltip
@@ -454,16 +369,6 @@ class VisOne {
                         .html(``);
                 })
         }
-
-
-        // make it mobile friendly so when you drag, it moves over
-        // make the circles closer together - done
-        // make a threshold for the circles, e.g., if it's x value, cap it at this size - done
-        // add a tooltip - done
-        // make a color scale attached to internet access
-        // make an if statement so the tooltip returns to white if there's no value
-        // you may not need to replace NAs with zero since you have an if statement for your NAs now
-        // figure out how to access the value of internet cost in the tooltip
 
 
 
