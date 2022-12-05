@@ -9,6 +9,7 @@ body {
 div  {
     font-weight: 200;
     font-size: large;
+
 }
 
 div p1 {
@@ -114,7 +115,6 @@ div p1 {
 
 .bold {
     font-weight: 600;
-    text-align: center;
 }
 
 .stackedbars-insight {
@@ -144,6 +144,7 @@ div p1 {
 .conclusion-content {
     margin-right: 20px;
     margin-left: 20px;
+}
 
 .axis line,
 .axis path {
