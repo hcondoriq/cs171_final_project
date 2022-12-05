@@ -125,6 +125,15 @@ div p1 {
     font-weight: 900;
 }
 
+.linechart-content {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.linechart-insight {
+    padding-top: 120px;
+}
+
 .axis line,
 .axis path {
     fill: none;
