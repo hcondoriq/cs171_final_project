@@ -18,7 +18,8 @@ class TimelineBrushVis {
     initVis() {
         let vis = this;
 
-        vis.margin = {top: 0, right: 40, bottom: 30, left: 40};
+        //vis.margin = {top: 0, right: 40, bottom: 30, left: 40};
+        vis.margin = {top: 20, right: 20, bottom: 20, left: 20};
 
         vis.width = document.getElementById(vis.parentElement).getBoundingClientRect().width - vis.margin.left - vis.margin.right;
         vis.height = document.getElementById(vis.parentElement).getBoundingClientRect().height  - vis.margin.top - vis.margin.bottom;
@@ -31,13 +32,13 @@ class TimelineBrushVis {
             .attr("transform", "translate(" + vis.margin.left + "," + vis.margin.top + ")");
 
         // add title
-        vis.svg.append('g')
-            .attr('class', 'title')
-            .attr('id', 'timeline-brush-title')
-            .append('text')
-            .text('How has worldwide access to broadband internet changed over time?')
-            .attr('transform', `translate(${vis.width / 2}, 20)`)
-            .attr('text-anchor', 'middle');
+        // vis.svg.append('g')
+        //     .attr('class', 'title')
+        //     .attr('id', 'timeline-brush-title')
+        //     .append('text')
+        //     .text('How has worldwide access to broadband internet changed over time?')
+        //     .attr('transform', `translate(${vis.width / 2}, 0)`)
+        //     .attr('text-anchor', 'middle');
 
 
         // scales and axes
